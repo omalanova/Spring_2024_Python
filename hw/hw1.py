@@ -33,4 +33,34 @@
 # Output: Квадрат суммы 3 и 2 равен 25
 # Сумма квадратов 3 и 2 равна 13
 
-print("Hello, World!")
+# print("Hello, World!")
+
+# user_name = input()
+# print(f"Hello, {user_name}!")
+
+# a = int(input())
+# b = int(input())
+# result = a + b
+# print(f'Результат = {result}')
+
+# print("*********")
+# print("*       *")
+# print("*       *")
+# print("*********")
+
+# number = int(input())
+# print(f"Тысячи - {number//1000}")
+# print(f"Сотни - {number//100%10}")
+# print(f"Десятки - {number//10%10}")
+# print(f"Единицы - {number%10}")
+
+number = input('Введи 4-значное число: ')
+print(f"Тысячи - {number[0]}")
+print(f"Сотни - {number[1]}")
+print(f"Десятки - {number[2]}")
+print(f"Единицы - {number[3]}")
+
+# a = int(input())
+# b = int(input())
+# print(f"Квадрат суммы {a} и {b} равен {(a + b) ** 2}")
+# print(f"Сумма квадратов {a} и {b} равен {a ** 2 + b ** 2}")
