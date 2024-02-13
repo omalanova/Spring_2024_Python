@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8049cbbb-d57e-44ba-84f9-f41aa1d3a552" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw/hw1.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw/hw1.py" afterDir="false" />
-    </list>
+    <list default="true" id="8049cbbb-d57e-44ba-84f9-f41aa1d3a552" name="Changes" comment="hw1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +52,19 @@
       <option name="presentableId" value="Default" />
       <updated>1707719108614</updated>
     </task>
+    <task id="LOCAL-00001" summary="hw1">
+      <option name="closed" value="true" />
+      <created>1707751984559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707751984559</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hw1" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw1" />
   </component>
 </project>
