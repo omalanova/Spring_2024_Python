@@ -35,12 +35,24 @@
 Напишите программу, которая печатает введенный текст заданное количество раз, 
 построчно. Текст и количество повторений нужно ввести с помощью input()"""
 
-txt = input('введите текст: ')
-count = int(input('введите количество повторений: '))
-print((txt + '\n') * count)
+# txt = input('введите текст: ')
+# count = int(input('введите количество повторений: '))
+# print((txt + '\n') * count)
 
 """Задание 2.5.
 Напишите программу-калькулятор, которая принимает два числа и оператор 
 (в формате str), производит заданное арифметическое действие и печатает 
 результат в формате: {num1} {operator) {num2) = {result}"""
 
+num1 = int(input('введите 1-е число: '))
+num2 = int(input('введите 2-е число: '))
+operator = input('введите оператор: ')
+
+if operator == '+':
+    print(f'{num1} {operator} {num2} = ', num1 + num2)
+if operator == '-':
+    print(f'{num1} {operator} {num2} = ', num1 - num2)
+if operator == '*':
+    print(f'{num1} {operator} {num2} = ', num1 * num2)
+if operator == '/':
+    print(f'{num1} {operator} {num2} = ', num1 / num2)
