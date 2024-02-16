@@ -22,9 +22,23 @@
 #
 # Can you help her?
 
-def greet(name):
-    if name == "Johnny":
-        return "Hello, my love!"
-    return "Hello, {name}!".format(name=name)
+# def greet(name):
+#     if name == "Johnny":
+#         return "Hello, my love!"
+#     return "Hello, {name}!".format(name=name)
+#
+# print(greet('Johnny'))
 
-print(greet('Johnny'))
+# Convert boolean values to strings 'Yes' or 'No'.
+
+# Complete the method that takes a boolean value and
+# return a "Yes" string for true, or a "No" string for false.
+
+def bool_to_word(boolean):
+    # TODO
+    if boolean:
+        return "Yes"
+    else:
+        return "No"
+
+print(bool_to_word(True))
