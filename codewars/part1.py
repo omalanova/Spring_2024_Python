@@ -8,6 +8,8 @@
 # 123  --> "123"
 # 999  --> "999"
 # -100 --> "-100"
+from array import array
+
 
 # def number_to_string(num):
 #     return str(num)
@@ -81,19 +83,66 @@
 #
 # Hint: Don't forget to check for bad values like null/undefined
 
-def count_sheeps(sheep):
-    # TODO May the force be with you
-    count = 0
-    for i in sheep:
-        if i == True:
-            count += 1
-    return count
-    # pass
+# def count_sheeps(sheep):
+#     # TODO May the force be with you
+#     count = 0
+#     for i in sheep:
+#         if i == True:
+#             count += 1
+#     return count
+#     # pass
+#
+#
+# print(count_sheeps([True, True, True, False,
+#                     True, True, True, True,
+#                     True, False, True, False,
+#                     True, False, False, True,
+#                     True, True, True, True,
+#                     False, False, True, True]))
+
+# Convert number to reversed array of digits
+
+# Convert number to reversed array of digits
+#
+# Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+# Example(Input => Output):
+#
+# 35231 => [1,3,2,5,3]
+# 0 => [0]
+
+def digitize(n):
+
+# Вариант 1. int - функция, которую map применит к каждому символу
+# в итерабельной последовательности n (строка - итерабельная последовательность))
+#     return(list(map(int, str(n))))  # -> [1, 2, 3, 4, 5]
+#     return list(map(int, str(n)))[::-1] # в обратном порядке
+
+# map, filter - эти встроенные функции можно переписать
+# с помощью генераторов списка. Например, так:
+#     return([int(x) for x in str(n)])  # -> [1, 2, 3, 4, 5]
+#     return([int(x) for x in str(n)])[::-1] # в обратном порядке
+
+# Вариант 2. Пройтись циклом по всем цифрам числа начиная с конца
+#     a = []
+#     if n == 0:
+#         return [n]
+#     else:
+#         while n > 0:
+#             a.append(n % 10)  # берем последнюю цифру числа и добавляем ее в список
+#             n //= 10  # убираем последнюю цифру числа
+#         return a
+# то же самое, но с другим условием
+#     result = []
+#     while n >= 1:
+#         result.append(n%10)
+#         n //= 10
+#     return result
 
 
-print(count_sheeps([True, True, True, False,
-                    True, True, True, True,
-                    True, False, True, False,
-                    True, False, False, True,
-                    True, True, True, True,
-                    False, False, True, True]))
+#вариант3
+# def digitize(n):
+#     mylist = [int(i) for i in str(n)]
+#     mylist.reverse()
+#     return mylist
+
+# print(digitize(52321))
