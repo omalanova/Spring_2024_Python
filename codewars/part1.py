@@ -173,3 +173,45 @@ def digitize(n):
 # best practice
 # def find_needle(haystack):
 #     return f'found the needle at position {haystack.index("needle")}'
+
+# A function within a function
+
+# Given an input n, write a function always that returns a function which returns n.
+# three = always(3)
+# three() / * returns 3 * /
+
+# def always(n=0):
+#     return lambda: n
+
+# A lambda function is a small anonymous function.
+#
+# A lambda function can take any number of arguments, but can only have one expression.
+# Syntax
+# lambda arguments : expression
+#
+# The expression is executed and the result is returned:
+
+# Sum Arrays
+
+# Write a function that takes an array of numbers and returns the sum of the numbers.The numbers
+# can be negative or non - integer.If the array does not contain any numbers then you should return 0.
+# Examples
+#
+# Input: [1, 5.2, 4, 0, -1]
+# Output: 9.2
+#
+# Input: []
+# Output: 0
+#
+# Input: [-2.398]
+# Output: -2.398
+
+# def sum_array(a):
+#     summ = 0
+#     for i in a:
+#         summ += i
+#     return summ
+# # best practice
+# def sum_array(a):
+#   return sum(a)
+
