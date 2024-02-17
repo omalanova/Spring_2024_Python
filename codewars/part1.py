@@ -55,11 +55,45 @@
 #
 # Names given are always valid strings.
 
-def are_you_playing_banjo(name):
-    # Implement me!
-    if name.lower()[0] == "r":
-        return name + " plays banjo"
-    else:
-        return name + " does not play banjo"
+# def are_you_playing_banjo(name):
+#     # Implement me!
+#     if name.lower()[0] == "r":
+#         return name + " plays banjo"
+#     else:
+#         return name + " does not play banjo"
+#
+# print(are_you_playing_banjo("om"))
 
-print(are_you_playing_banjo("om"))
+# Counting sheep...
+
+# Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+#
+# For example,
+#
+# [True,  True,  True,  False,
+#   True,  True,  True,  True ,
+#   True,  False, True,  False,
+#   True,  False, False, True ,
+#   True,  True,  True,  True ,
+#   False, False, True,  True]
+#
+# The correct answer would be 17.
+#
+# Hint: Don't forget to check for bad values like null/undefined
+
+def count_sheeps(sheep):
+    # TODO May the force be with you
+    count = 0
+    for i in sheep:
+        if i == True:
+            count += 1
+    return count
+    # pass
+
+
+print(count_sheeps([True, True, True, False,
+                    True, True, True, True,
+                    True, False, True, False,
+                    True, False, False, True,
+                    True, True, True, True,
+                    False, False, True, True]))
