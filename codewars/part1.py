@@ -110,7 +110,7 @@ from array import array
 # 35231 => [1,3,2,5,3]
 # 0 => [0]
 
-def digitize(n):
+# def digitize(n):
 
 # Вариант 1. int - функция, которую map применит к каждому символу
 # в итерабельной последовательности n (строка - итерабельная последовательность))
@@ -139,7 +139,7 @@ def digitize(n):
 #     return result
 
 
-#вариант3
+# вариант3
 # def digitize(n):
 #     mylist = [int(i) for i in str(n)]
 #     mylist.reverse()
@@ -271,4 +271,29 @@ def digitize(n):
 #     else:
 #         return 'Player 2 won!'
 
+# Formatting decimal places  # 0
 
+# Each number should be formatted that it is rounded to two decimal places.You don 't need to check whether the input is a valid number because only valid numbers are used in the tests.
+#
+# Example:
+# 5.5589 is rounded 5.56
+# 3.3424 is rounded 3.34
+
+# #my solution
+# def two_decimal_places(n):
+#     # raise NotImplementedError("TODO: two_decimal_places")
+#     if int(abs(n) * 1000) % 10 >= 5:
+#         if n < 0:
+#             return ((int(abs(n) * 1000) // 10 + 1) / 100) * (-1)
+#         else:
+#             return ((int(n * 1000) // 10 + 1) / 100)
+#     else:
+#         if n < 0:
+#             return (int(abs(n) * 1000) // 10 / 100 * (-1))
+#         else:
+#             return (int(n * 1000) // 10 / 100)
+#
+# #best practice
+#
+# def two_decimal_places(n):
+#     return round(n, 2)

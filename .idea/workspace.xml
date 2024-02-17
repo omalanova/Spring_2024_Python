@@ -36,7 +36,7 @@
   "keyToString": {
     "Python.hw1.executor": "Run",
     "Python.hw2.executor": "Run",
-    "Python.part1.executor": "Debug",
+    "Python.part1.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
