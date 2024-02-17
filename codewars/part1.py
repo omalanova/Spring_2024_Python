@@ -279,7 +279,7 @@ from array import array
 # 5.5589 is rounded 5.56
 # 3.3424 is rounded 3.34
 
-# #my solution
+# #my solution https://www.codewars.com/kata/reviews/564220d56003fa369c000036/groups/65d0b4cb468ac100010eaeeb
 # def two_decimal_places(n):
 #     # raise NotImplementedError("TODO: two_decimal_places")
 #     if int(abs(n) * 1000) % 10 >= 5:
@@ -297,3 +297,36 @@ from array import array
 #
 # def two_decimal_places(n):
 #     return round(n, 2)
+
+# Formatting decimal places #1
+
+# Each floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
+#
+# Don't round the numbers! Just cut them after two decimal places!
+#
+# Right examples:
+# 32.8493 is 32.84
+# 14.3286 is 14.32
+#
+# Incorrect examples (e.g. if you round the numbers):
+# 32.8493 is 32.85
+# 14.3286 is 14.33
+
+# my solution
+
+# def two_decimal_places(number):
+#     return int(number * 100) / 100.0
+
+# Stringy Strings
+
+# write me a function stringy that takes a size and returns a string of alternating 1s and 0s.
+#
+# the string should start with a 1.
+#
+# a string with size 6 should return :'101010'.
+#
+# with size 4 should return : '1010'.
+#
+# with size 12 should return : '101010101010'.
+
+def stringy(size):
