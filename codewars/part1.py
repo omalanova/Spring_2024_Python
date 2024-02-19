@@ -329,4 +329,12 @@ from array import array
 #
 # with size 12 should return : '101010101010'.
 
-def stringy(size):
+# def stringy(size):
+#     str1 = ''
+#     for i in range(size):
+#         if i % 2 == 0:
+#             str1 = str1 + '1'
+#         else:
+#             str1 = str1 + '0'
+#     return str1
+# print(stringy(6))
