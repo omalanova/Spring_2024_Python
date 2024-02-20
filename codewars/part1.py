@@ -394,6 +394,49 @@ from array import array
 #
 # print(format_money(3.1))
 
+# Is it a number?
+
+# Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+#
+# Valid examples, should return true:
+#
+# isDigit("3")
+# isDigit("  3  ")
+# isDigit("-3.23")
+#
+# should return false:
+#
+# isDigit("3-4")
+# isDigit("  3   5")
+# isDigit("3 5")
+# isDigit("zero")
+
+# def is_digit(s):
+#     if s.strip().isdigit():
+#         return True
+#     if not(s.strip().startswith(".")) and not(s.strip().endswith(".")) and s.count(".") ==1:
+#         return True
+#     if s.strip().startswith("-"):
+#         s = float(s[1:])
+#         return True
+#     return False
+
+# best practice
+def isDigit(string):
+    try:
+        float(string)
+        return True
+    except:
+        return False
+
+print(is_digit("3"))
+print(is_digit("  3  "))
+print(is_digit("-3.23"))
+print(is_digit("3-4"))
+print(is_digit("    3   5"))
+print(is_digit("3  5"))
+print(is_digit("zero"))
+
 # Get Planet Name By ID
 
 # The function is not returning the correct values. Can you figure out why?
@@ -432,16 +475,16 @@ from array import array
 
 #best practice 2
 
-def get_planet_name(id):
-    planets = {
-        1: "Mercury",
-        2: "Venus",
-        3: "Earth",
-        4: "Mars",
-        5: "Jupiter",
-        6: "Saturn",
-        7: "Uranus",
-        8: "Neptune",
-    }
-    return planets[id]
-print(get_planet_name(1))
+# def get_planet_name(id):
+#     planets = {
+#         1: "Mercury",
+#         2: "Venus",
+#         3: "Earth",
+#         4: "Mars",
+#         5: "Jupiter",
+#         6: "Saturn",
+#         7: "Uranus",
+#         8: "Neptune",
+#     }
+#     return planets[id]
+# print(get_planet_name(1))
