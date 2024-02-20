@@ -418,8 +418,22 @@ from array import array
 
 # best practice
 
+# def get_planet_name(id):
+#     return {
+#         1: "Mercury",
+#         2: "Venus",
+#         3: "Earth",
+#         4: "Mars",
+#         5: "Jupiter",
+#         6: "Saturn",
+#         7: "Uranus",
+#         8: "Neptune",
+#     }.get(id, None)
+
+#best practice 2
+
 def get_planet_name(id):
-    return {
+    planets = {
         1: "Mercury",
         2: "Venus",
         3: "Earth",
@@ -428,6 +442,6 @@ def get_planet_name(id):
         6: "Saturn",
         7: "Uranus",
         8: "Neptune",
-    }.get(id, None)
-
+    }
+    return planets[id]
 print(get_planet_name(1))
