@@ -253,6 +253,7 @@ from array import array
 #     if beats[p2] == p1:
 #         return "Player 2 won!"
 #     return "Draw!"
+
 # #best practice2
 #
 # def rps(p1, p2):
@@ -338,3 +339,38 @@ from array import array
 #             str1 = str1 + '0'
 #     return str1
 # print(stringy(6))
+
+#my solution
+# def most_frequent_item_count(collection):
+#     maxcount = 0
+#     for i in range(0, len(collection)):
+#         count = 0
+#         for j in range(0, len(collection)):
+#             if (collection[i] == collection[j]):
+#                 count += 1
+#         if (count > maxcount):
+#             maxcount = count
+#
+#     return maxcount
+
+# best practice 1
+
+# def most_frequent_item_count(collection):
+#     if collection:
+#         return max([collection.count(item) for item in collection])
+#     return 0
+
+# best practice 2
+
+# def most_frequent_item_count(collection):
+#     # Do your magic. :)
+#     counts = []
+#     if collection ==[]:
+#         return 0
+#     else:
+#         for i in collection:
+#             counts.append(collection.count(i))
+#     return max(counts)
+# collection = [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]
+# print(most_frequent_item_count(collection)) # 5 -> число -1 встречается 5 раз
+
