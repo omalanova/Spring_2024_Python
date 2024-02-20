@@ -374,3 +374,60 @@ from array import array
 # collection = [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]
 # print(most_frequent_item_count(collection)) # 5 -> число -1 встречается 5 раз
 
+# Dollars and Cents
+
+# The company you work for has just been awarded a contract to build a payment gateway. In order to help move things along, you have volunteered to create a function that will take a float and return the amount formatting in dollars and cents.
+#
+# 39.99 becomes $39.99
+#
+# The rest of your team will make sure that the argument is sanitized before being passed to your
+# function although you will need to account for adding trailing zeros if they are missing
+# (though you won't have to worry about a dangling period).
+#
+# Examples:
+#
+# 3 needs to become $3.00
+# 3.1 needs to become $3.10
+
+# def format_money(amount): # https://pythoner.name/formatted-output
+#     return f'${amount:.2f}'
+#
+# print(format_money(3.1))
+
+# Get Planet Name By ID
+
+# The function is not returning the correct values. Can you figure out why?
+#
+# Example (Input --> Output ):
+#
+# 3 --> "Earth"
+
+# def get_planet_name(id):
+#     # This doesn't work; Fix it!
+#     name=""
+#     match id:        # switch -> match
+#         case 1: name = "Mercury"
+#         case 2: name = "Venus"
+#         case 3: name = "Earth"
+#         case 4: name = "Mars"
+#         case 5: name = "Jupiter"
+#         case 6: name = "Saturn"
+#         case 7: name = "Uranus"
+#         case 8: name = "Neptune"
+#     return name
+
+# best practice
+
+def get_planet_name(id):
+    return {
+        1: "Mercury",
+        2: "Venus",
+        3: "Earth",
+        4: "Mars",
+        5: "Jupiter",
+        6: "Saturn",
+        7: "Uranus",
+        8: "Neptune",
+    }.get(id, None)
+
+print(get_planet_name(1))
