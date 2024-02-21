@@ -7,16 +7,17 @@
 #    - получите сумму всех чисел,
 #    - распечатайте все строки, где есть буква 'a'
 #
-list_1 = ['Hi', 'ananas', 2, 75, 'pizza', 36, 100]
-summ = 0
-for item in list_1:
-    if type(item) == int or type(item) == float:
-        summ += item
-print(summ)
-
+# list_1 = ['Hi', 'ananas', 2, 75, 'pizza', 36, 100]
+# summ = 0
+# for item in list_1:
+#     if type(item) == int or type(item) == float:
+#         summ += item
+# print(summ)
 
 # 3.3. Превратите лист ['cat', 'dog', 'horse', 'cow'] в кортеж
 #
+print(tuple(['cat', 'dog', 'horse', 'cow']))
+
 # 3.4. Напишите программу, которая определяет, какая семья больше.
 #       1) Программа имеет два input() - например, family_1, family_2.
 #       2) Членов семьи нужно перечислить через запятую.
