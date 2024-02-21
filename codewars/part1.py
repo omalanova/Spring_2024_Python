@@ -421,13 +421,23 @@ from array import array
 #         return True
 #     return False
 
-# best practice
-def isDigit(string):
-    try:
-        float(string)
-        return True
-    except:
-        return False
+# best practice 1
+# def is_digit(string):
+#     try:
+#         float(string)
+#         return True
+#     except:
+#         return False
+
+# best practice 2
+# def is_digit(string):
+#     return string.lstrip('-').replace('.','').isdigit()
+
+# best practice 3
+from re import match
+
+def is_digit(string):
+    return bool(match(r"^[-+]?\d+\.?\d*?$", string))
 
 print(is_digit("3"))
 print(is_digit("  3  "))
