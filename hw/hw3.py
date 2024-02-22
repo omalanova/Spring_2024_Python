@@ -40,25 +40,27 @@
 #     - распечатайте только значения
 #     - распечатайте пары ключ - значение
 #
-dict_film = {'title': 'Бриллиантовая рука',
-             'director': 'Леонид Гайдай',
-             'year': 1969,
-             'budget': 435000,
-             'main_actor': 'Юрий Никулин',
-             'slogan': 'Куй железо не отходя от кассы'
-}
-print(dict_film.keys())
-print(dict_film.values())
-
+# dict_film = {'title': 'Бриллиантовая рука',
+#              'director': 'Леонид Гайдай',
+#              'year': 1969,
+#              'budget': 435000,
+#              'main_actor': 'Юрий Никулин',
+#              'slogan': 'Куй железо не отходя от кассы'
+# }
+# print(dict_film.keys())
+# print(dict_film.values())
+# print(dict_film)
 
 # 3.6. Найдите сумму всех значений в словаре my_dictionary = {'num1': 375, 'num2': 567, 'num3': -37, 'num4': 21}
 #
-my_dictionary = {'num1': 375, 'num2': 567, 'num3': -37, 'num4': 21}
-
+# my_dictionary = {'num1': 375, 'num2': 567, 'num3': -37, 'num4': 21}
+# print(sum(my_dictionary.values()))
 
 # 3.7. Удалите повторяющиеся значения из списка [1, 2, 3, 4, 5, 3, 2, 1]
 #
-
+list1 = [1, 2, 3, 4, 5, 3, 2, 1]
+new_list = set(list1)
+print(new_list)
 
 # 3.8. Даны два множества: set1 = {'a', 'z', 1, 5, 9, 12, 100, 'b'}, set2 = {5, 'z', 1, 8, 9, 21, 100, 'l', 785}
 #      - найдите значения, которые встречаются в обоих множествах
