@@ -436,16 +436,16 @@ from array import array
 # best practice 3
 from re import match
 
-def is_digit(string):
-    return bool(match(r"^[-+]?\d+\.?\d*?$", string))
-
-print(is_digit("3"))
-print(is_digit("  3  "))
-print(is_digit("-3.23"))
-print(is_digit("3-4"))
-print(is_digit("    3   5"))
-print(is_digit("3  5"))
-print(is_digit("zero"))
+# def is_digit(string):
+#     return bool(match(r"^[-+]?\d+\.?\d*?$", string))
+#
+# print(is_digit("3"))
+# print(is_digit("  3  "))
+# print(is_digit("-3.23"))
+# print(is_digit("3-4"))
+# print(is_digit("    3   5"))
+# print(is_digit("3  5"))
+# print(is_digit("zero"))
 
 # Get Planet Name By ID
 
