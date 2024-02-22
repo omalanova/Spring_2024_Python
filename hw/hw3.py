@@ -16,13 +16,26 @@
 
 # 3.3. Превратите лист ['cat', 'dog', 'horse', 'cow'] в кортеж
 #
-print(tuple(['cat', 'dog', 'horse', 'cow']))
+# print(tuple(['cat', 'dog', 'horse', 'cow']))
 
 # 3.4. Напишите программу, которая определяет, какая семья больше.
 #       1) Программа имеет два input() - например, family_1, family_2.
 #       2) Членов семьи нужно перечислить через запятую.
 #      Ожидаемый результат - программа выводит семью с бОльшим составом. Если состав одинаковый, print("Equal')
 #
+# family_1 = list(input('введи членов семьи 1: ')) # dad, mom, son
+# family_2 = list(input('введи членов семьи 2: ')) # dad, mom, daugther
+family_1 = ['dad', 'mom', 'son']
+family_2 = ['dad', 'mom', 'son']
+if len(family_1) > len(family_2):
+    print(family_1)
+elif len(family_1) < len(family_2):
+    print(family_1)
+else:
+    print('Equal')
+
+
+
 # 3.5. Создайте словарь film c ключами title, director, year, budget, main_actor, slogan. В значения можете передать информацию
 #     о вашем любимом фильме.
 #     - распечатайте только ключи
