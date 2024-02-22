@@ -25,16 +25,14 @@
 #
 # family_1 = list(input('введи членов семьи 1: ')) # dad, mom, son
 # family_2 = list(input('введи членов семьи 2: ')) # dad, mom, daugther
-family_1 = ['dad', 'mom', 'son']
-family_2 = ['dad', 'mom', 'son']
-if len(family_1) > len(family_2):
-    print(family_1)
-elif len(family_1) < len(family_2):
-    print(family_1)
-else:
-    print('Equal')
-
-
+# family_1 = ['dad', 'mom', 'son']
+# family_2 = ['dad', 'mom', 'son']
+# if len(family_1) > len(family_2):
+#     print(family_1)
+# elif len(family_1) < len(family_2):
+#     print(family_1)
+# else:
+#     print('Equal')
 
 # 3.5. Создайте словарь film c ключами title, director, year, budget, main_actor, slogan. В значения можете передать информацию
 #     о вашем любимом фильме.
@@ -42,10 +40,26 @@ else:
 #     - распечатайте только значения
 #     - распечатайте пары ключ - значение
 #
+dict_film = {'title': 'Бриллиантовая рука',
+             'director': 'Леонид Гайдай',
+             'year': 1969,
+             'budget': 435000,
+             'main_actor': 'Юрий Никулин',
+             'slogan': 'Куй железо не отходя от кассы'
+}
+print(dict_film.keys())
+print(dict_film.values())
+
+
 # 3.6. Найдите сумму всех значений в словаре my_dictionary = {'num1': 375, 'num2': 567, 'num3': -37, 'num4': 21}
 #
+my_dictionary = {'num1': 375, 'num2': 567, 'num3': -37, 'num4': 21}
+
+
 # 3.7. Удалите повторяющиеся значения из списка [1, 2, 3, 4, 5, 3, 2, 1]
 #
+
+
 # 3.8. Даны два множества: set1 = {'a', 'z', 1, 5, 9, 12, 100, 'b'}, set2 = {5, 'z', 1, 8, 9, 21, 100, 'l', 785}
 #      - найдите значения, которые встречаются в обоих множествах
 #      - найдите значения, которые не встречаются в обоих множествах
