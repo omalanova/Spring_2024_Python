@@ -39,7 +39,22 @@
 #
 # * 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
 # * 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
-def flip(d, a):
-    return sorted(a) if d == 'R' else sorted(a, reverse=True)
-print(flip('R', [3, 2, 1, 2]))
-print(flip('L', [1, 4, 5, 3, 5 ]))
+# def flip(d, a):
+#     return sorted(a) if d == 'R' else sorted(a, reverse=True)
+# print(flip('R', [3, 2, 1, 2]))
+# print(flip('L', [1, 4, 5, 3, 5 ]))
+
+# Who ate the cookie?
+# For this problem you must create a program that says who ate the last cookie.
+# If the input is a string then "Zach" ate the cookie.
+# If the input is a float or an int then "Monica" ate the cookie.
+# If the input is anything else "the dog" ate the cookie.
+# The way to return the statement is: "Who ate the last cookie? It was (name)!"
+#
+# Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach! (The reason you return Zach is because the input is a string)
+#
+# Note: Make sure you return the correct message with correct spaces and punctuation.
+
+def cookie(x):
+    return f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
+print(cookie(2.3))
