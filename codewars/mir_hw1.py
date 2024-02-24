@@ -75,15 +75,15 @@
 # splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
 # splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
 
-def split_and_merge(string_, separator):
-    words = string_.split(' ')
-    result = []
-    for i in words:
-        i = separator.join(i)
-        result.append(i)
-    return ' '.join(result)
-
-print(split_and_merge('My name is John', '-'))
+# def split_and_merge(string_, separator):
+#     words = string_.split(' ')
+#     result = []
+#     for i in words:
+#         i = separator.join(i)
+#         result.append(i)
+#     return ' '.join(result)
+#
+# print(split_and_merge('My name is John', '-'))
 
 # Sum of Multiples
 # Your Job
@@ -134,6 +134,7 @@ print(split_and_merge('My name is John', '-'))
     # solution 2
 #     return [name, name[0:2] if len(name) > 2 else name]
 # print(who_is_paying("Mexico"))
+
 # Reverse List Order
 # In this kata you will create a function that takes in a list and returns a list with the reverse order.
 # Examples (Input -> Output)
@@ -141,3 +142,41 @@ print(split_and_merge('My name is John', '-'))
 # * [1, 2, 3, 4]  -> [4, 3, 2, 1]
 # * [9, 2, 0, 7]  -> [7, 0, 2, 9]
 
+# def reverse_list(l):
+#     return l[::-1]
+#     # return list(reversed(l)) # -> solution 2
+#     # l.reverse()              #-> solution 3
+#     #   return l
+# print(reverse_list([1,2,3,4]))
+
+# Will there be enough space?
+
+# The Story:
+#
+# Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+# Task Overview:
+#
+# You have to write a function that accepts three parameters:
+#
+#     cap is the amount of people the bus can hold excluding the driver.
+#     on is the number of people on the bus excluding the driver.
+#     wait is the number of people waiting to get on to the bus excluding the driver.
+#
+# If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+# Usage Examples:
+#
+# cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+# cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+def enough(cap, on, wait):
+    if on == wait and cap == on + wait:
+        return f'He can fit all {wait} passengers'
+    elif cap > on + wait:
+        return f'He can fit all {wait} passengers'
+    else:
+        return f'He can\'t fit {wait - cap + on} of the {wait} waiting'
+
+# best practice
+# def enough(cap, on, wait):
+#     return max(0, wait - (cap - on))
+print(enough(20, 5, 5))
