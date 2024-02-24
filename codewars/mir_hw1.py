@@ -203,9 +203,23 @@
 # Your points are not included in the array of your class's points.
 # For calculating the average point you may add your point to the given array!
 
-def better_than_average(class_points, your_points):
-    average_of_class = sum(class_points) / len(class_points)
-    return your_points >= average_of_class
-print(better_than_average([2, 3], 5))
-print(better_than_average([100, 40, 34, 57, 29, 72, 57, 88], 75))
-print(better_than_average([41, 75, 72, 56, 80, 82, 81, 33], 50))
+# def better_than_average(class_points, your_points):
+#     average_of_class = sum(class_points) / len(class_points)
+#     return your_points >= average_of_class
+# print(better_than_average([2, 3], 5))
+# print(better_than_average([100, 40, 34, 57, 29, 72, 57, 88], 75))
+# print(better_than_average([41, 75, 72, 56, 80, 82, 81, 33], 50))
+
+# Find the position!
+# When provided with a letter, return its position in the alphabet.
+#
+# Input :: "a"
+#
+# Ouput :: "Position of alphabet: 1"
+
+def position(alphabet):
+    if 97 <= ord(alphabet) <= 122:
+        return f'Position of alphabet: {ord(alphabet) - 96}'
+    if 65 <= ord(alphabet) <= 90:
+        return f'Position of alphabet: {ord(alphabet) - 64}'
+print(position('B'))
