@@ -217,9 +217,37 @@
 #
 # Ouput :: "Position of alphabet: 1"
 
-def position(alphabet):
-    if 97 <= ord(alphabet) <= 122:
-        return f'Position of alphabet: {ord(alphabet) - 96}'
-    if 65 <= ord(alphabet) <= 90:
-        return f'Position of alphabet: {ord(alphabet) - 64}'
-print(position('B'))
+# def position(alphabet):
+#     if 97 <= ord(alphabet) <= 122:
+#         return f'Position of alphabet: {ord(alphabet) - 96}'
+#     if 65 <= ord(alphabet) <= 90:
+#         return f'Position of alphabet: {ord(alphabet) - 64}'
+# print(position('B'))
+
+# Fake Binary
+
+# Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+#
+# Note: input will never be an empty string
+
+# def fake_bin(x):
+#     result = ''
+#     for i in range(0, len(x)):
+#         if int(x[i]) < 5:
+#             result = result + '0'
+#         else:
+#             result = result + '1'
+#     return result
+# def fake_bin(x):
+#     result = ""
+#     for num in x:
+#         if int(num) < 5:
+#             result = result + "0"
+#         else:
+#             result = result + "1"
+#     return result
+
+# best practice
+def fake_bin(x):
+    return ''.join('0' if c < '5' else '1' for c in x)
+print(fake_bin('45385593107843568'))
