@@ -248,9 +248,9 @@
 #     return result
 
 # best practice
-def fake_bin(x):
-    return ''.join('0' if c < '5' else '1' for c in x)
-print(fake_bin('45385593107843568'))
+# def fake_bin(x):
+#     return ''.join('0' if c < '5' else '1' for c in x)
+# print(fake_bin('45385593107843568'))
 
 # Convert a string to an array
 # Write a function to split a string and convert it into an array of words.
@@ -260,14 +260,14 @@ print(fake_bin('45385593107843568'))
 #
 # "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
-def string_to_array(s):
-    return s.split(' ')
-
-print(string_to_array('Robin Singh'))
-
-# Volume of a Cuboid
-# Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid.
-# Write a function to help Bob with this calculation.
-def get_volume_of_cuboid(length, width, height):
-    return length * width * height
-print(get_volume_of_cuboid(1, 2, 2))
+# def string_to_array(s):
+#     return s.split(' ')
+#
+# print(string_to_array('Robin Singh'))
+#
+# # Volume of a Cuboid
+# # Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid.
+# # Write a function to help Bob with this calculation.
+# def get_volume_of_cuboid(length, width, height):
+#     return length * width * height
+# print(get_volume_of_cuboid(1, 2, 2))
