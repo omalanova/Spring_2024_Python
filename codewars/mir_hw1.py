@@ -109,7 +109,31 @@
 #         return 'INVALID'
 
 # best practice
-def sum_mul(n, m):
-    return sum(range(n, m, n)) if n > 0 and m > 0 else "INVALID"
+# def sum_mul(n, m):
+#     return sum(range(n, m, n)) if n > 0 and m > 0 else "INVALID"
+#
+# print(sum_mul(4, 123))
 
-print(sum_mul(4, 123))
+# Who is going to pay for the wall?
+# Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+#
+# Your code will show Full name of the neighbor and the truncated version of the name as an array.
+# If the number of the characters in name is less than or equal to two, it will return an array
+# containing only the name as is"
+
+def who_is_paying(name):
+    # solution 1
+    # if len(name) <= 2:
+    #     return [name]
+    # else:
+    #     return [name, name[0] + name[1]]
+    # solution 2
+#     return [name, name[0:2] if len(name) > 2 else name]
+# print(who_is_paying("Mexico"))
+# Reverse List Order
+# In this kata you will create a function that takes in a list and returns a list with the reverse order.
+# Examples (Input -> Output)
+#
+# * [1, 2, 3, 4]  -> [4, 3, 2, 1]
+# * [9, 2, 0, 7]  -> [7, 0, 2, 9]
+
