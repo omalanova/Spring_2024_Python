@@ -75,11 +75,11 @@
 # splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
 # splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
 
-def split_and_merge(string, sp):
-    words = string.split(' ')
+def split_and_merge(string_, separator):
+    words = string_.split(' ')
     result = []
     for i in words:
-        i = sp.join(i)
+        i = separator.join(i)
         result.append(i)
     return ' '.join(result)
 
