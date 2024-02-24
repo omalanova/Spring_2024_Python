@@ -46,12 +46,64 @@
 # ('*', 5, 5) --> 25
 # ('/', 49, 7) --> 7
 
-def basic_op(operator, value1, value2):
-    if operator == '+':
-        return value1 + value2
-    if operator == '-':
-        return value1 - value2
-    if operator == '*':
-        return value1 * value2
-    if operator == '/':
-        return value1 / value2
+# my solution
+# def basic_op(operator, value1, value2):
+#     if operator == '+':
+#         return value1 + value2
+#     if operator == '-':
+#         return value1 - value2
+#     if operator == '*':
+#         return value1 * value2
+#     if operator == '/':
+#         return value1 / value2
+
+# best practice
+
+# def basic_op(operator, value1, value2):
+#     return eval(f'{value1}{operator}{value2}')
+
+# Training JS #18: Methods of String object--concat() split() and its good friend join()
+
+# Implement a function which accepts 2 arguments: string and separator.
+#
+# The expected algorithm: split the string into words by spaces, split each word into separate characters and join them back with the specified separator, join all the resulting "words" back into a sentence with spaces.
+#
+# For example:
+#
+# splitAndMerge("My name is John", " ")  ==  "M y n a m e i s J o h n"
+# splitAndMerge("My name is John", "-")  ==  "M-y n-a-m-e i-s J-o-h-n"
+# splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
+# splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
+
+# def split_and_merge(string_, separator):
+#     words = string_.split()
+#     print(list(words))
+#     return words
+# print(split_and_merge('My name is John', ' '))
+
+# Sum of Multiples
+# Your Job
+#
+# Find the sum of all multiples of n below m
+# Keep in Mind
+#
+#     n and m are natural numbers (positive integers)
+#     m is excluded from the multiples
+#
+# Examples
+#
+# sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+# sumMul(3, 13)  ==> 3 + 6 + 9 + 12 = 30
+# sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+# sumMul(4, -7)  ==> "INVALID"
+
+# def sum_mul(n, m):
+#     if (n > 0 and m > 0):
+#         sum == 0
+#         for i in range(m):
+#             if i % n:
+#                 sum += i
+#         return sum
+#     else:
+#         return 'INVALID'
+# print(sum_mul(2, 9))
