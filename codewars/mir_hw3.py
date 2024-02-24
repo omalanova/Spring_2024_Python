@@ -9,22 +9,26 @@
 #     By convention, noon is 12:00 pm, and midnight is 12:00 am.
 #     On 12-hours clock, there is no 0 hour, and time just after midnight is denoted as, for example, 12:15 am. On 24-hour clock, this translates to 0015.
 
-def to24hourtime(hour, minute, period):
-    result = ('')
-    if period == 'am':
-        result = (result
-                  + str(hour % 12).rjust(2, '0')
-                  + str(minute).rjust(2, '0'))
-        return result
-    elif hour == 12:
-        result = (result
-                  + str((hour) % 24).rjust(2, '0')
-                  + str(minute).rjust(2, '0'))
-        return result
-    else:
-        result = (result
-                  + str((hour + 12) % 24).rjust(2, '0')
-                  + str(minute).rjust(2, '0'))
-        return result
+# def to24hourtime(hour, minute, period):
+#     result = ('')
+#     if period == 'am':
+#         result = (result
+#                   + str(hour % 12).rjust(2, '0')
+#                   + str(minute).rjust(2, '0'))
+#         return result
+#     elif hour == 12:
+#         result = (result
+#                   + str((hour) % 24).rjust(2, '0')
+#                   + str(minute).rjust(2, '0'))
+#         return result
+#     else:
+#         result = (result
+#                   + str((hour + 12) % 24).rjust(2, '0')
+#                   + str(minute).rjust(2, '0'))
+#         return result
 
-print(to24hourtime(12, 0, 'pm'))
+# best practice
+# def to24hourtime(hour, minute, period):
+#     return '%02d%02d' % (hour % 12 + 12 * (period == 'pm'), minute)
+#
+# print(to24hourtime(1, 0, 'pm'))

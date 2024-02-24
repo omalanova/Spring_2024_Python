@@ -97,13 +97,19 @@
 # sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
 # sumMul(4, -7)  ==> "INVALID"
 
+# my solution
 # def sum_mul(n, m):
 #     if (n > 0 and m > 0):
-#         sum == 0
-#         for i in range(m):
-#             if i % n:
+#         sum = 0
+#         for i in range(n, m):
+#             if i % n == 0:
 #                 sum += i
 #         return sum
 #     else:
 #         return 'INVALID'
-# print(sum_mul(2, 9))
+
+# best practice
+def sum_mul(n, m):
+    return sum(range(n, m, n)) if n > 0 and m > 0 else "INVALID"
+
+print(sum_mul(4, 123))
