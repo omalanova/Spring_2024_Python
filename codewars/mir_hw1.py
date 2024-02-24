@@ -75,11 +75,15 @@
 # splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
 # splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
 
-# def split_and_merge(string_, separator):
-#     words = string_.split()
-#     print(list(words))
-#     return words
-# print(split_and_merge('My name is John', ' '))
+def split_and_merge(string, sp):
+    words = string.split(' ')
+    result = []
+    for i in words:
+        i = sp.join(i)
+        result.append(i)
+    return ' '.join(result)
+
+print(split_and_merge('My name is John', '-'))
 
 # Sum of Multiples
 # Your Job
@@ -121,7 +125,7 @@
 # If the number of the characters in name is less than or equal to two, it will return an array
 # containing only the name as is"
 
-def who_is_paying(name):
+# def who_is_paying(name):
     # solution 1
     # if len(name) <= 2:
     #     return [name]
