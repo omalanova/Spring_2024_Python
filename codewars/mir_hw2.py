@@ -69,10 +69,22 @@ print(cookie(2.3))
 # You will be given a string of numbers and letters mixed up,
 # you have to return all the numbers in that string in the order they occur.
 
-def filter_string(st):
-    num = ''
-    for i in st:
-        if i.isdigit():
-            num += i
-    return int(num)
+# def filter_string(st):
+#     num = ''
+#     for i in st:
+#         if i.isdigit():
+#             num += i
+#     return int(num)
 
+# Sentence Smash
+#
+# Write a function that takes an array of words and smashes them together into a sentence
+# and returns the sentence. You can ignore any need to sanitize words or add punctuation,
+# but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning
+# or the end of the sentence!
+# Example
+#
+# ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+def smash(words):
+    return ' '.join(words)
