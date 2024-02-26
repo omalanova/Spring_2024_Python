@@ -55,9 +55,9 @@
 #
 # Note: Make sure you return the correct message with correct spaces and punctuation.
 
-def cookie(x):
-    return f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
-print(cookie(2.3))
+# def cookie(x):
+#     return f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
+# print(cookie(2.3))
 
 # Filter the number
 # Oh, no! The number has been mixed up with the text. Your goal is to retrieve the number from the text, can you return the number back to its original state?
@@ -86,5 +86,5 @@ print(cookie(2.3))
 #
 # ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-def smash(words):
-    return ' '.join(words)
+# def smash(words):
+#     return ' '.join(words)

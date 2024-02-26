@@ -54,6 +54,9 @@ def count_execution_time(func):
 @count_execution_time
 def greeting(name):
     return f'Hello {name}!'
+
+greeting('Qwer')
+
 # 4.6. Создайте файл my_calc.py и пропишите в нем минимум 4 функции, выполняющие базовые арифметические вычисления.
 #      Примените эти функции в качестве методов в другом файле.
 from my_calc import *
