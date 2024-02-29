@@ -177,13 +177,13 @@
 #
 # because 8 is higher than the array's length.
 
-def get_mean(arr,x,y):
-    if x <= len(arr) and y <= len(arr) and x > 1 and y > 1:
-        s1 = sum(arr[0:x]) / x
-        s2 = sum(arr[len(arr)-y:]) / y
-    else:
-        return -1
-    return (s1 + s2) / 2
+# def get_mean(arr,x,y):
+#     if x <= len(arr) and y <= len(arr) and x > 1 and y > 1:
+#         s1 = sum(arr[0:x]) / x
+#         s2 = sum(arr[len(arr)-y:]) / y
+#     else:
+#         return -1
+#     return (s1 + s2) / 2
 
 # best practice 1
 # def get_mean(arr,x,y):
@@ -195,6 +195,6 @@ def get_mean(arr,x,y):
 # def get_mean(a,x,y):
 #     return -1 if x<2 or y<2 or y>len(a) else mean([mean(a[:x]),mean(a[-y:])])
 
-print(get_mean([1, 3, 2, 4], 2, 3))
-print(get_mean([1,3,2],2,2))
-print(get_mean([1,3,2,4],1,2))
+# print(get_mean([1, 3, 2, 4], 2, 3))
+# print(get_mean([1,3,2],2,2))
+# print(get_mean([1,3,2,4],1,2))
