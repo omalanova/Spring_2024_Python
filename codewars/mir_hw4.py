@@ -55,13 +55,13 @@
 # Kevin is noticing his space run out! Write a function that removes the spaces from the values and returns an array showing the space decreasing.
 # For example, running this function on the array ['i', 'have','no','space'] would produce ['i','ihave','ihaveno','ihavenospace']
 
-def spacey(array):
-    new_array = []
-    new_str = ''
-    for word in array:
-        new_str += word
-        new_array.append(new_str)
-    return new_array
+# def spacey(array):
+#     new_array = []
+#     new_str = ''
+#     for word in array:
+#         new_str += word
+#         new_array.append(new_str)
+#     return new_array
 
 # best practice
 # def spacey(array):
@@ -70,4 +70,37 @@ def spacey(array):
 #
 # def spacey(a):
 #     return list(accumulate(a))
-print(spacey(['kevin', 'has','no','space']))
+# print(spacey(['kevin', 'has','no','space']))
+
+# All Star Code Challenge #3
+# This Kata is intended as a small challenge for my students
+#
+# Create a function that takes a string argument and returns that same string with all vowels removed (vowels are "a", "e", "i", "o", "u").
+#
+# Example (Input --> Output)
+#
+# "drake" --> "drk"
+# "aeiou" --> ""
+#
+# remove_vowels("drake") // => "drk"
+# remove_vowels("aeiou") // => ""
+
+def remove_vowels(strng):
+    new_string = ''
+    for letter in strng:
+        if letter in 'aeiou':
+            continue
+        else:
+            new_string += letter
+    return new_string
+
+#best practice
+# def remove_vowels(strng):
+#     return ''.join([i for i in strng if i not in 'aeiou'])
+
+#def remove_vowels(strng):
+    # str = ['a','i','u','e','o']
+    # for i in str:
+    #     strng = strng.replace(i, "")
+    # return strng
+print(remove_vowels('dark'))
