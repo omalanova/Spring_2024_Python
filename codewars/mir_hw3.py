@@ -144,17 +144,57 @@
 #
 # Note: you will be provided atleast one word and should take string as input and return string as output.
 
-def drop_cap(words):
-    res = ''
-    for word in words.split(' '):
-        if len(word) > 2:
-            res = res + word.capitalize() + ' '
-        else:
-            res = res + word + ' '
-    return res[0:len(res) - 1]
+# def drop_cap(words):
+#     res = ''
+#     for word in words.split(' '):
+#         if len(word) > 2:
+#             res = res + word.capitalize() + ' '
+#         else:
+#             res = res + word + ' '
+#     return res[0:len(res) - 1]
+#
+# # best practice
+# # def drop_cap(str_):
+# #     return ' '.join( w.capitalize() if len(w) > 2 else w for w in str_.split(' ') )
+#
+# print(drop_cap('apple      of banana'))
 
-# best practice
-# def drop_cap(str_):
-#     return ' '.join( w.capitalize() if len(w) > 2 else w for w in str_.split(' ') )
+# The mean of two means -> https://www.codewars.com/kata/583df40bf30065fa9900010c
+# Write a function that takes as parameters an array (arr) and 2 integers (x and y). The function should return the mean between the mean of the the first x elements of the array and the mean of the last y elements of the array.
+#
+# The mean should be computed if both x and y have values higher than 1 but less or equal to the array's length. Otherwise the function should return -1.
+# Examples
+#
+# [1, 3, 2, 4], 2, 3 => should return 2.5
+#
+# because: the mean of the the first 2 elements of the array is (1+3)/2=2 and the mean of the last 3 elements of the array is (4+2+3)/3=3 so the mean of those 2 means is (2+3)/2=2.5.
+#
+# [1, 3, 2, 4], 1, 2 => should return -1
+#
+# because x is not higher than 1.
+#
+# [1, 3, 2, 4], 2, 8 => should return -1
+#
+# because 8 is higher than the array's length.
 
-print(drop_cap('apple      of banana'))
+def get_mean(arr,x,y):
+    if x <= len(arr) and y <= len(arr) and x > 1 and y > 1:
+        s1 = sum(arr[0:x]) / x
+        s2 = sum(arr[len(arr)-y:]) / y
+    else:
+        return -1
+    return (s1 + s2) / 2
+
+# best practice 1
+# def get_mean(arr,x,y):
+#     if 1 < x <= len(arr) and 1 < y <= len(arr):
+#        return (sum(arr[:x])/x+sum(arr[-y:])/y)/2
+#     return -1
+# best practice 2
+# from numpy import mean
+# def get_mean(a,x,y):
+#     return -1 if x<2 or y<2 or y>len(a) else mean([mean(a[:x]),mean(a[-y:])])
+
+print(get_mean([1, 3, 2, 4], 2, 3))
+print(get_mean([1,3,2],2,2))
+print(get_mean([1,3,2,4],1,2))
