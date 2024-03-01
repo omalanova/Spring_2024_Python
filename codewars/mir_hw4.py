@@ -85,14 +85,14 @@
 # remove_vowels("drake") // => "drk"
 # remove_vowels("aeiou") // => ""
 
-def remove_vowels(strng):
-    new_string = ''
-    for letter in strng:
-        if letter in 'aeiou':
-            continue
-        else:
-            new_string += letter
-    return new_string
+# def remove_vowels(strng):
+#     new_string = ''
+#     for letter in strng:
+#         if letter in 'aeiou':
+#             continue
+#         else:
+#             new_string += letter
+#     return new_string
 
 #best practice
 # def remove_vowels(strng):
@@ -103,4 +103,30 @@ def remove_vowels(strng):
     # for i in str:
     #     strng = strng.replace(i, "")
     # return strng
-print(remove_vowels('dark'))
+# print(remove_vowels('dark'))
+
+# The old switcheroo 2
+# This is a follow up from my kata The old switcheroo
+#
+# Write the function :
+#
+# def encode(str)
+#
+# that takes in a string str and replaces all the letters with their respective positions in the English alphabet.
+#
+# encode('abc') == '123'   # a is 1st in English alpabet, b is 2nd and c is 3rd
+# encode('codewars') == '315452311819'
+# encode('abc-#@5') == '123-#@5'
+#
+# String are case sensitive.
+
+def encode(string):
+    new_str = ''
+    for i in string.lower():
+        if i.isalpha():
+            new_str += str(ord(i) - 96)
+        else:
+            new_str += i
+    return new_str
+
+print(encode('abc'))
