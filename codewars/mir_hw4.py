@@ -148,5 +148,21 @@
 #
 # If you're stuck, check out the python.org tutorial section on strings and search "slice".
 
-def greet_jedi(first, last):
-    return f'Greetings, master {last[0:3].capitalize() + first[0:2].capitalize()}'
+# def greet_jedi(first, last):
+#     return f'Greetings, master {last[0:3].capitalize() + first[0:2].capitalize()}'
+
+# Tidy Number (Special Numbers Series #9)
+# A Tidy number is a number whose digits are in non-decreasing order.
+# Task
+#
+# Given a number, Find if it is Tidy or not .
+
+def tidyNumber(n):
+    while n > 0:
+        if n%10 >= (n//10)%10:
+            n = n//10
+        else:
+            return False
+    return True
+
+print(tidyNumber(2222))
