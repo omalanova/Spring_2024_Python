@@ -91,7 +91,12 @@
 #         else:
 #             jaden_string = jaden_string + word.title() + ' '
 #     return jaden_string.strip()
-
+# def to_jaden_case(string):
+#     jaden_string = ''
+#     sentence = string.split()
+#     for word in sentence:
+#         jaden_string = jaden_string + word.capitalize() + ' '
+#     return jaden_string.strip()
 # best practice
 # def to_jaden_case(string):
 #     return ' '.join(word.capitalize() for word in string.split())
