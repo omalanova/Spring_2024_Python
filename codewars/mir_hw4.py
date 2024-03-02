@@ -274,13 +274,69 @@
 #
 # The input string will only consist of lower case letters and/or spaces.
 
-def get_count(sentence):
-    count = 0
-    for i in range(len(sentence)):
-        if sentence[i] in 'aeiou':
-            count += 1
-    return count
-# best practice
-#def getCount(s):
-    # return sum(c in 'aeiou' for c in s)
-print(get_count('aeiou'))
+# def get_count(sentence):
+#     count = 0
+#     for i in range(len(sentence)):
+#         if sentence[i] in 'aeiou':
+#             count += 1
+#     return count
+# # best practice
+# #def getCount(s):
+#     # return sum(c in 'aeiou' for c in s)
+# print(get_count('aeiou'))
+
+# makeBackronym
+# back·ro·nym
+#
+#     An acronym deliberately formed from a phrase whose initial letters spell out a particular word or words, either to create a memorable name or as a fanciful explanation of a word's origin.
+#
+#     "Biodiversity Serving Our Nation", or BISON
+#
+# (from https://en.oxforddictionaries.com/definition/backronym)
+#
+# Complete the function to create backronyms. Transform the given string (without spaces) to a backronym, using the preloaded dictionary and return a string of words, separated with a single space (but no trailing spaces).
+#
+# The keys of the preloaded dictionary are uppercase letters A-Z and the values are predetermined words, for example:
+#
+# dictionary["P"] == "perfect"
+#
+# Examples
+#
+# "dgm" ==> "disturbing gregarious mustache"
+#
+# "lkj" ==> "literal klingon joke"
+
+dictionary = {
+    'H': 'hippy',
+    'Y': 'yogic',
+    'N': 'newtonian',
+    'B': 'beautiful',
+    'D': 'disturbing',
+    'P': 'perfect',
+    'L': 'literal',
+    'G': 'gregarious',
+    'F': 'fantastic',
+    'Q': 'queen',
+    'Z': 'zero',
+    'S': 'stylish',
+    'I': 'ingestable',
+    'O': 'oscillating',
+    'A': 'awesome',
+    'R': 'rant',
+    'W': 'weird',
+    'U': 'underlying',
+    'M': 'mustache',
+    'T': 'turn',
+    'X': 'xylophone',
+    'V': 'volcano',
+    'K': 'klingon',
+    'C': 'confident',
+    'J': 'joke',
+    'E': 'eager'
+}
+
+
+def make_backronym(acronym):
+    return ' '.join(dictionary[ch] for ch in acronym.upper())
+
+print(make_backronym('dgm'))
