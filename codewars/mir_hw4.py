@@ -187,17 +187,53 @@
 #
 # Hint: using a try / except statement may simplify this kata.
 
-def my_add(a, b):
-    try:
-        if type(a + b) in [int, float, complex]:
-            return a + b
-    except:
-           return None
+# def my_add(a, b):
+#     try:
+#         if type(a + b) in [int, float, complex]:
+#             return a + b
+#     except:
+#            return None
 
 # def my_add(a, b):
 #     try:
 #         return a + b
 #     except TypeError:
 #         return None
-print(my_add(1, 3.141))
-print(my_add(42, " is the answer."))
+# print(my_add(1, 3.141))
+# print(my_add(42, " is the answer."))
+
+# Log without dates
+# You will be given an array of events, which are represented by strings. The strings are dates in HH:MM:SS format.
+#
+# It is known that all events are recorded in chronological order and two events can't occur in the same second.
+#
+# Return the minimum number of days during which the log is written.
+# Example:
+#
+# Input -> ["00:00:00", "00:01:11", "02:15:59", "23:59:58", "23:59:59"]
+# Output -> 1
+#
+# Input -> ["12:12:12"]
+# Output -> 1
+#
+# Input -> ["12:00:00", "23:59:59", "00:00:00"]
+# Output -> 2
+#
+# Input -> []
+# Output -> 0
+
+def check_logs(log):
+    if len(log) == 0:
+        return 0
+    if len(log) == 1:
+        return 1
+    count_days = 1
+    for k in range(1, len(log)):
+        if log[k-1] >= log[k]:
+            count_days += 1
+
+    return count_days
+print(check_logs(["00:00:00", "00:01:11", "02:15:59", "23:59:58", "23:59:59"]))
+print(check_logs(["12:12:12"]))
+print(check_logs(["12:00:00", "23:59:59", "00:00:00"]))
+print(check_logs([]))
