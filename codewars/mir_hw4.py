@@ -250,19 +250,37 @@
 # full_text = "aaabbbcccc", search_text = "bbb"
 #     ---> should return 1
 
-def solution(full_text, search_text):
-    count = 0
-    for i in range(0, len(full_text)+1):
-        if full_text[i:i+len(search_text)] == search_text:
-            count += 1
-            # print(full_text[i:i+len(search_text)])
-    return count
+# def solution(full_text, search_text):
+#     count = 0
+#     for i in range(0, len(full_text)+1):
+#         if full_text[i:i+len(search_text)] == search_text:
+#             count += 1
+#             # print(full_text[i:i+len(search_text)])
+#     return count
+#
+# # best practice
+# #def solution(full_text, search_text):
+# #    return full_text.count(search_text)
+# print(solution('abcdeb','b'))
+# print(solution('abc','b'))
+# print(solution('abbc','bb'))
+# print(solution('abcdeb','b'))
+# print(solution('abcdeb', 'a'))
 
+# Vowel Count
+# Return the number (count) of vowels in the given string.
+#
+# We will consider a, e, i, o, u as vowels for this Kata (but not y).
+#
+# The input string will only consist of lower case letters and/or spaces.
+
+def get_count(sentence):
+    count = 0
+    for i in range(len(sentence)):
+        if sentence[i] in 'aeiou':
+            count += 1
+    return count
 # best practice
-#def solution(full_text, search_text):
-#    return full_text.count(search_text)
-print(solution('abcdeb','b'))
-print(solution('abc','b'))
-print(solution('abbc','bb'))
-print(solution('abcdeb','b'))
-print(solution('abcdeb', 'a'))
+#def getCount(s):
+    # return sum(c in 'aeiou' for c in s)
+print(get_count('aeiou'))
