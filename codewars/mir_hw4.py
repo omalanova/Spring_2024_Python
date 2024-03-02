@@ -222,18 +222,47 @@
 # Input -> []
 # Output -> 0
 
-def check_logs(log):
-    if len(log) == 0:
-        return 0
-    if len(log) == 1:
-        return 1
-    count_days = 1
-    for k in range(1, len(log)):
-        if log[k-1] >= log[k]:
-            count_days += 1
+# def check_logs(log):
+#     if len(log) == 0:
+#         return 0
+#     if len(log) == 1:
+#         return 1
+#     count_days = 1
+#     for k in range(1, len(log)):
+#         if log[k-1] >= log[k]:
+#             count_days += 1
+#
+#     return count_days
+# print(check_logs(["00:00:00", "00:01:11", "02:15:59", "23:59:58", "23:59:59"]))
+# print(check_logs(["12:12:12"]))
+# print(check_logs(["12:00:00", "23:59:59", "00:00:00"]))
+# print(check_logs([]))
 
-    return count_days
-print(check_logs(["00:00:00", "00:01:11", "02:15:59", "23:59:58", "23:59:59"]))
-print(check_logs(["12:12:12"]))
-print(check_logs(["12:00:00", "23:59:59", "00:00:00"]))
-print(check_logs([]))
+# Return substring instance count
+# Complete the solution so that it returns the number of times the search_text is found within the full_text. Overlap is not permitted : "aaa" contains 1 instance of "aa", not 2.
+#
+# Usage example:
+#
+# full_text = "aa_bb_cc_dd_bb_e", search_text = "bb"
+#     ---> should return 2 since "bb" shows up twice
+#
+#
+# full_text = "aaabbbcccc", search_text = "bbb"
+#     ---> should return 1
+
+def solution(full_text, search_text):
+    count = 0
+    for i in range(0, len(full_text)+1):
+        if full_text[i:i+len(search_text)] == search_text:
+            count += 1
+            # print(full_text[i:i+len(search_text)])
+    return count
+
+# best practice
+#def solution(full_text, search_text):
+#    return full_text.count(search_text)
+print(solution('abcdeb','b'))
+print(solution('abc','b'))
+print(solution('abbc','bb'))
+print(solution('abcdeb','b'))
+print(solution('abcdeb', 'a'))
