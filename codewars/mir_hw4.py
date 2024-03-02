@@ -157,12 +157,47 @@
 #
 # Given a number, Find if it is Tidy or not .
 
-def tidyNumber(n):
-    while n > 0:
-        if n%10 >= (n//10)%10:
-            n = n//10
-        else:
-            return False
-    return True
+# def tidyNumber(n):
+#     while n > 0:
+#         if n%10 >= (n//10)%10:
+#             n = n//10
+#         else:
+#             return False
+#     return True
+# best practice
+# def tidyNumber(n):
+#     s = list(str(n))
+#     return s == sorted(s)
 
-print(tidyNumber(2222))
+# def tidyNumber(n):
+#     n = str(n)
+#     for i in range(0, len(n) - 1):
+#         if n[i] > n[i + 1]:
+#             return False
+#
+#     return True
+# print(tidyNumber(2222))
+
+# Thinkful - Logic Drills: Graceful addition
+# You like the way the Python + operator easily handles adding different numeric types, but you need a tool to do that kind of addition without killing your program with a TypeError exception whenever you accidentally try adding incompatible types like strings and lists to numbers.
+#
+# You decide to write a function my_add() that takes two arguments. If the arguments can be added together it returns the sum. If adding the arguments together would raise an error the function should return None instead.
+#
+# For example, my_add(1, 3.414) would return 4.414, but my_add(42, " is the answer.") would return None.
+#
+# Hint: using a try / except statement may simplify this kata.
+
+def my_add(a, b):
+    try:
+        if type(a + b) in [int, float, complex]:
+            return a + b
+    except:
+           return None
+
+# def my_add(a, b):
+#     try:
+#         return a + b
+#     except TypeError:
+#         return None
+print(my_add(1, 3.141))
+print(my_add(42, " is the answer."))
