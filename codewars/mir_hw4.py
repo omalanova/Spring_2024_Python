@@ -306,37 +306,61 @@
 #
 # "lkj" ==> "literal klingon joke"
 
-dictionary = {
-    'H': 'hippy',
-    'Y': 'yogic',
-    'N': 'newtonian',
-    'B': 'beautiful',
-    'D': 'disturbing',
-    'P': 'perfect',
-    'L': 'literal',
-    'G': 'gregarious',
-    'F': 'fantastic',
-    'Q': 'queen',
-    'Z': 'zero',
-    'S': 'stylish',
-    'I': 'ingestable',
-    'O': 'oscillating',
-    'A': 'awesome',
-    'R': 'rant',
-    'W': 'weird',
-    'U': 'underlying',
-    'M': 'mustache',
-    'T': 'turn',
-    'X': 'xylophone',
-    'V': 'volcano',
-    'K': 'klingon',
-    'C': 'confident',
-    'J': 'joke',
-    'E': 'eager'
-}
+# dictionary = {
+#     'H': 'hippy',
+#     'Y': 'yogic',
+#     'N': 'newtonian',
+#     'B': 'beautiful',
+#     'D': 'disturbing',
+#     'P': 'perfect',
+#     'L': 'literal',
+#     'G': 'gregarious',
+#     'F': 'fantastic',
+#     'Q': 'queen',
+#     'Z': 'zero',
+#     'S': 'stylish',
+#     'I': 'ingestable',
+#     'O': 'oscillating',
+#     'A': 'awesome',
+#     'R': 'rant',
+#     'W': 'weird',
+#     'U': 'underlying',
+#     'M': 'mustache',
+#     'T': 'turn',
+#     'X': 'xylophone',
+#     'V': 'volcano',
+#     'K': 'klingon',
+#     'C': 'confident',
+#     'J': 'joke',
+#     'E': 'eager'
+# }
+#
+#
+# def make_backronym(acronym):
+#     return ' '.join(dictionary[ch] for ch in acronym.upper())
+#
+# print(make_backronym('dgm'))
 
+# Transpose two strings in an array
+# You will be given an array that contains two strings. Your job is to create a function that will take those two strings and transpose them, so that the strings go from top to bottom instead of left to right.
+#
+# e.g. transposeTwoStrings(['Hello','World']);
+#
+# should return
+#
+# H W
+# e o
+# l r
+# l l
+# o d
+#
+# A few things to note:
+#
+#     There should be one space in between the two characters
+#     You don't have to modify the case (i.e. no need to change to upper or lower)
+#     If one string is longer than the other, there should be a space where the character would be
 
-def make_backronym(acronym):
-    return ' '.join(dictionary[ch] for ch in acronym.upper())
-
-print(make_backronym('dgm'))
+from itertools import zip_longest
+def transpose_two_strings(arr):
+    return '\n'.join(' '.join(s) for s in zip_longest(*arr, fillvalue=' '))
+print(transpose_two_strings(['Hello', 'World']))
