@@ -360,7 +360,7 @@
 #     You don't have to modify the case (i.e. no need to change to upper or lower)
 #     If one string is longer than the other, there should be a space where the character would be
 
-from itertools import zip_longest
-def transpose_two_strings(arr):
-    return '\n'.join(' '.join(s) for s in zip_longest(*arr, fillvalue=' '))
-print(transpose_two_strings(['Hello', 'World']))
+# from itertools import zip_longest
+# def transpose_two_strings(arr):
+#     return '\n'.join(' '.join(s) for s in zip_longest(*arr, fillvalue=' '))
+# print(transpose_two_strings(['Hello', 'World']))
