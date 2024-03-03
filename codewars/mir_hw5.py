@@ -181,6 +181,38 @@
 # worthy_ship = Ship(100,20)
 # print(worthy_ship.is_worth_it())
 
+# Double value every next call
+# This kata is about static method that should return different values.
+#
+# On the first call it must be 1, on the second and others - it must be a double from previous value.
+#
+# Look tests for more examples, good luck :)
+
+class Class:
+    number = 1
+    @staticmethod
+    def get_number():
+        if Class.number == 1:
+            Class.number *= 2
+            return 1
+        else:
+            number_new = Class.number
+            Class.number *= 2
+            return number_new
+
+# best practice
+# class Class:
+#     value=1
+#     def get_number():
+#         result=Class.value
+#         Class.value*=2
+#         return result
+
+Class.get_number() # -> 1
+Class.get_number() # -> 2
+Class.get_number() # -> 4
+print(Class.get_number()) # -> 8
+
 # Thinkful - Object Drills: Quarks
 # You're modelling the interaction between a large number of quarks and have decided to create a Quark class so you can generate your own quark objects.
 #
@@ -210,24 +242,24 @@
 # >>> q2.color
 # "red"
 
-class Quark(object):
-    def __init__(self, color, flavor):
-        self.color = color
-        self.flavor = flavor
-        self.baryon_number = 1 / 3
-    def interact(self, quark):
-        self.color, quark.color = quark.color, self.color
-
-q1 = Quark("red", "up")
-print(q1.color)
-print(q1.flavor)
-q2 = Quark("blue", "strange")
-print(q2.color)
-print(q2.flavor)
-print(q2.baryon_number)
-q1.interact(q2)
-print(q1.color)
-print(q2.color)
+# class Quark(object):
+#     def __init__(self, color, flavor):
+#         self.color = color
+#         self.flavor = flavor
+#         self.baryon_number = 1 / 3
+#     def interact(self, quark):
+#         self.color, quark.color = quark.color, self.color
+#
+# q1 = Quark("red", "up")
+# print(q1.color)
+# print(q1.flavor)
+# q2 = Quark("blue", "strange")
+# print(q2.color)
+# print(q2.flavor)
+# print(q2.baryon_number)
+# q1.interact(q2)
+# print(q1.color)
+# print(q2.color)
 
 
 # Menu Display
