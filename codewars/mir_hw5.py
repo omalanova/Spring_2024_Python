@@ -34,21 +34,21 @@
 #
 # `get_surface_area()` return the surface area of the `Block`
 
-class Block:
-    def __init__(self, array):
-        self.width = array[0]
-        self.length = array[1]
-        self.height = array[2]
-    def get_width(self):
-        return self.width
-    def get_length(self):
-        return self.length
-    def get_height(self):
-        return self.height
-    def get_volume(self):
-        return self.get_width() * self.get_length() * self.get_height()
-    def get_surface_area(self):
-        return 2 * (self.get_width() * self.get_length() + self.get_width() * self.get_height() + self.get_length() * self.get_height())
+# class Block:
+#     def __init__(self, array):
+#         self.width = array[0]
+#         self.length = array[1]
+#         self.height = array[2]
+#     def get_width(self):
+#         return self.width
+#     def get_length(self):
+#         return self.length
+#     def get_height(self):
+#         return self.height
+#     def get_volume(self):
+#         return self.get_width() * self.get_length() * self.get_height()
+#     def get_surface_area(self):
+#         return 2 * (self.get_width() * self.get_length() + self.get_width() * self.get_height() + self.get_length() * self.get_height())
 
 # best practice
 #class Block(object):
@@ -63,9 +63,82 @@ class Block:
     # def get_volume(self):       return self.v
     # def get_surface_area(self): return self.a
 
-block1 = Block([2,2,2])
-print(block1.get_width(), block1.get_length(), block1.get_height())
-print(block1.get_volume(), block1.get_surface_area())
+# block1 = Block([2,2,2])
+# print(block1.get_width(), block1.get_length(), block1.get_height())
+# print(block1.get_volume(), block1.get_surface_area())
+
+# Building Spheres
+# Now that we have a Block let's move on to something slightly more complex: a Sphere.
+# Arguments for the constructor
+#
+# radius -> integer or float (do not round it)
+# mass -> integer or float (do not round it)
+#
+# Methods to be defined
+#
+# get_radius()       =>  radius of the Sphere (do not round it)
+# get_mass()         =>  mass of the Sphere (do not round it)
+# get_volume()       =>  volume of the Sphere (rounded to 5 place after the decimal)
+# get_surface_area() =>  surface area of the Sphere (rounded to 5 place after the decimal)
+# get_density()      =>  density of the Sphere (rounded to 5 place after the decimal)
+#
+# Example
+#
+# ball = Sphere(2,50)
+# ball.get_radius() ->       2
+# ball.get_mass() ->         50
+# ball.get_volume() ->       33.51032
+# ball.get_surface_area() -> 50.26548
+# ball.get_density() ->      1.49208
+#
+# Any feedback would be much appreciated
+
+from math import pi
+class object:
+    def __init__(self):
+        self.object = object
+class Sphere(object):
+    def __init__(self, radius, mass):
+        self.radius = radius
+        self.mass = mass
+
+    def get_radius(self):
+        return self.radius
+    def get_mass(self):
+        return self.mass
+    def get_volume(self):
+        return round(4 / 3 * pi * self.get_radius()**3, 5)
+    def get_surface_area(self):
+        return round(4 * pi * self.get_radius() ** 2, 5)
+    def get_density(self):
+        return round(self.get_mass() / self.get_volume(), 5)
+
+# best practice
+# from math import pi
+# class Sphere(object):
+#     def __init__(self, radius, mass):
+#         self.radius = radius
+#         self.mass = mass
+#         self.volume = 4*pi * self.radius**3 / 3
+#         self.surface = 4*pi* self.radius**2
+#     def get_radius(self):
+#         return self.radius
+#     def get_mass(self):
+#         return self.mass
+#     def get_volume(self):
+#         return round(self.volume,5)
+#     def get_surface_area(self):
+#         return round(self.surface,5)
+#     def get_density(self):
+#         return round(self.mass/self.volume, 5)
+
+
+ball = Sphere(2, 50)
+print(ball.get_radius())
+print(ball.get_mass())
+print(ball.get_volume())
+print(ball.get_density())
+
 
 # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
