@@ -93,25 +93,25 @@
 #
 # Any feedback would be much appreciated
 
-from math import pi
-class object:
-    def __init__(self):
-        self.object = object
-class Sphere(object):
-    def __init__(self, radius, mass):
-        self.radius = radius
-        self.mass = mass
-
-    def get_radius(self):
-        return self.radius
-    def get_mass(self):
-        return self.mass
-    def get_volume(self):
-        return round(4 / 3 * pi * self.get_radius()**3, 5)
-    def get_surface_area(self):
-        return round(4 * pi * self.get_radius() ** 2, 5)
-    def get_density(self):
-        return round(self.get_mass() / self.get_volume(), 5)
+# from math import pi
+# class object:
+#     def __init__(self):
+#         self.object = object
+# class Sphere(object):
+#     def __init__(self, radius, mass):
+#         self.radius = radius
+#         self.mass = mass
+#
+#     def get_radius(self):
+#         return self.radius
+#     def get_mass(self):
+#         return self.mass
+#     def get_volume(self):
+#         return round(4 / 3 * pi * self.get_radius()**3, 5)
+#     def get_surface_area(self):
+#         return round(4 * pi * self.get_radius() ** 2, 5)
+#     def get_density(self):
+#         return round(self.get_mass() / self.get_volume(), 5)
 
 # best practice
 # from math import pi
@@ -132,13 +132,54 @@ class Sphere(object):
 #     def get_density(self):
 #         return round(self.mass/self.volume, 5)
 
+# class Sphere:
+#     def __init__(self, radius, mass):
+#         self.radius, self.mass = radius, mass
+#         self.area = __import__('math').pi*4*radius**2
+#         self.volume = self.area/3*radius
+#         self.density = mass/self.volume
+#     _get = lambda x: lambda self, decimal=5: round(getattr(self, x), decimal)
+#     get_surface_area = _get('area')
+#     get_density = _get('density')
+#     get_radius = _get('radius')
+#     get_volume = _get('volume')
+#     get_mass = _get('mass')
 
-ball = Sphere(2, 50)
-print(ball.get_radius())
-print(ball.get_mass())
-print(ball.get_volume())
-print(ball.get_density())
 
+# ball = Sphere(2, 50)
+# print(ball.get_radius())
+# print(ball.get_mass())
+# print(ball.get_volume())
+# print(ball.get_density())
+
+# OOP: Object Oriented Piracy
+
+# Task
+#
+# You have access to the ship "draft" and "crew". "Draft" is the total ship weight and "crew" is the number of humans on the ship.
+#
+# Each crew member adds 1.5 units to the ship draft. If after removing the weight of the crew, the draft is still more than 20, then the ship is worth looting. Any ship weighing that much must have a lot of booty!
+#
+# Add the method
+#
+# is_worth_it
+#
+# to decide if the ship is worthy to loot. For example:
+#
+# Titanic.is_worth_it()
+# False
+
+class Ship:
+    def __init__(self, draft, crew):
+        self.draft = draft
+        self.crew = crew
+    def is_worth_it(self):
+        return self.draft - 1.5 * self.crew > 20
+
+Titanic = Ship(15, 10)
+print(Titanic.is_worth_it())
+worthy_ship = Ship(100,20)
+print(worthy_ship.is_worth_it())
 
 # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
