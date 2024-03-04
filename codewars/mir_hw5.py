@@ -272,18 +272,65 @@
 # joe.greet('Kate') # should return 'Hello Kate, my name is Joe'
 # joe.name          # should == 'Joe'
 
-class Person:
-    def __init__(self, my_name):
-        self.name = my_name
+# class Person:
+#     def __init__(self, my_name):
+#         self.name = my_name
+#
+#     def greet(self, your_name):
+#         return f"Hello {your_name}, my name is {self.name}"
+#
+# jack = Person("Jack")
+# jill = Person("Jill")
+# print(jack.greet('Jill'))
+# print(jack.greet('Mary'))
 
-    def greet(self, your_name):
-        return f"Hello {your_name}, my name is {self.name}"
+# These are not my grades! (Revamped !)
+# At the end of the last semester, Prof. Joey Greenhorn implemented an online report card for his students in order to save paper. Everything seemed to be working fine back then, but since the start of the new semester he has received several emails from students complaining about erroneous grades showing up in their online report cards. Can you help him correct his implementation of the "Student" class?
+#
+# The "Student" class should behave like this :
+#
+# someStudent = Student()
+# someOtherStudent = Student()
+# someStudent.add_grade(98)
+# someOtherStudent.add_grade(77)
+# someStudent.grades == [98] # Evaluates to True
+# someOtherStudent.grades == [77] # Evaluates to True
+#
+# But right now, this is happening :
+#
+# someStudent = Student()
+# someOtherStudent = Student()
+# someStudent.add_grade(98)
+# someOtherStudent.add_grade(77)
+# someStudent.grades == [98, 77] # Evaluates to True
+# someOtherStudent.grades == [98, 77] # Evaluates to True
 
-jack = Person("Jack")
-jill = Person("Jill")
-print(jack.greet('Jill'))
-print(jack.greet('Mary'))
+class Student:
 
+    def __init__(self, first_name, last_name, grades=[]):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.grades = list(grades)
+
+    def add_grade(self, grade):
+        self.grades.append(grade)
+
+    def get_average(self):
+        return sum(self.grades) / len(self.grades)
+johnDoe = Student('John', 'Doe')
+janeDoe = Student('Jane', 'Doe')
+jamesSmith = Student('James', 'Smith')
+jennaSmith = Student('Jenna', 'Smith')
+johnDoe.add_grade(63)
+print(johnDoe.grades)
+janeDoe.add_grade(92)
+print(janeDoe.grades)
+jamesSmith.add_grade(82)
+jennaSmith.add_grade(75)
+print(johnDoe.get_average())
+print((63+92+82+75)/4)
+print(johnDoe.grades)
+print(janeDoe.grades)
 
 # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
