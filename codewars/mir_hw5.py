@@ -305,18 +305,18 @@
 # someStudent.grades == [98, 77] # Evaluates to True
 # someOtherStudent.grades == [98, 77] # Evaluates to True
 
-class Student:
-
-    def __init__(self, first_name, last_name, grades=[]):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.grades = list(grades)
-
-    def add_grade(self, grade):
-        self.grades.append(grade)
-
-    def get_average(self):
-        return sum(self.grades) / len(self.grades)
+# class Student:
+#
+#     def __init__(self, first_name, last_name, grades=[]):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.grades = list(grades)
+#
+#     def add_grade(self, grade):
+#         self.grades.append(grade)
+#
+#     def get_average(self):
+#         return sum(self.grades) / len(self.grades)
 
 # best practice
 # class Student:
@@ -332,20 +332,68 @@ class Student:
 #     def get_average(self):
 #         return sum(self.grades) / len(self.grades)
 
-johnDoe = Student('John', 'Doe')
-janeDoe = Student('Jane', 'Doe')
-jamesSmith = Student('James', 'Smith')
-jennaSmith = Student('Jenna', 'Smith')
-johnDoe.add_grade(63)
-print(johnDoe.grades)
-janeDoe.add_grade(92)
-print(janeDoe.grades)
-jamesSmith.add_grade(82)
-jennaSmith.add_grade(75)
-print(johnDoe.get_average())
-print((63+92+82+75)/4)
-print(johnDoe.grades)
-print(janeDoe.grades)
+# johnDoe = Student('John', 'Doe')
+# janeDoe = Student('Jane', 'Doe')
+# jamesSmith = Student('James', 'Smith')
+# jennaSmith = Student('Jenna', 'Smith')
+# johnDoe.add_grade(63)
+# print(johnDoe.grades)
+# janeDoe.add_grade(92)
+# print(janeDoe.grades)
+# jamesSmith.add_grade(82)
+# jennaSmith.add_grade(75)
+# print(johnDoe.get_average())
+# print((63+92+82+75)/4)
+# print(johnDoe.grades)
+# print(janeDoe.grades)
+
+# Competitive eating scoreboard
+# You are the judge at a competitive eating competition and you need to choose a winner!
+#
+# There are three foods at the competition and each type of food is worth a different amount of points. Points are as follows:
+#
+#     Chickenwings: 5 points
+#
+#     Hamburgers: 3 points
+#
+#     Hotdogs: 2 points
+#
+# Write a function that helps you create a scoreboard. It takes as a parameter a list of objects representing the participants, for example:
+#
+# [
+#   {name: "Habanero Hillary", chickenwings: 5 , hamburgers: 17, hotdogs: 11},
+#   {name: "Big Bob" , chickenwings: 20, hamburgers: 4, hotdogs: 11}
+# ]
+#
+# It should return "name" and "score" properties sorted by score; if scores are equals, sort alphabetically by name.
+#
+# [
+#   {name: "Big Bob", score: 134},
+#   {name: "Habanero Hillary", score: 98}
+# ]
+#
+# Happy judging!
+
+# def scoreboard(who_ate_what):
+
+# Person Class Bug
+# The following code was thought to be working properly, however when the code tries to access the age of the person instance it fails.
+#
+# person = Person('Yukihiro', 'Matsumoto', 47)
+# print(person.full_name)
+# print(person.age)
+#
+# For this exercise you need to fix the code so that it works correctly.
+#
+# Note: the order of the person's full name is first name and last name.
+
+class Person():
+
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.full_name = first_name + ' ' + last_name
 
 # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
