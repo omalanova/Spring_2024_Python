@@ -395,7 +395,105 @@ class Person():
         self.age = age
         self.full_name = first_name + ' ' + last_name
 
-# Menu Display
+# best practice
+#class Person():
+
+    # def __init__(self, first_name, last_name, age):
+    #     self.first_name = first_name
+    #     self.last_name = last_name
+    #     self.age = age
+    #
+    # @property
+    # def full_name(self):
+    #     return f'{self.first_name} {self.last_name}'
+
+# с использованием property and setters
+# class Person():
+#
+#     def __init__(self, first_name, last_name, age):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+#
+#     @property
+#     def first_name(self):
+#         return self._first_name
+#
+#     @first_name.setter
+#     def first_name(self, first_name):
+#         self._first_name = first_name
+#
+#     @property
+#     def last_name(self):
+#         return self._last_name
+#
+#     @last_name.setter
+#     def last_name(self, last_name):
+#         self._last_name = last_name
+#
+#     @property
+#     def full_name(self):
+#         return f'{self.first_name} {self.last_name}'
+#
+#     @property
+#     def age(self):
+#         return self._age
+#
+#     @age.setter
+#     def age(self, age):
+#         self._age = age
+
+# First-Class Function Factory
+# Write a function, factory, that takes a number as its parameter and returns another function.
+#
+# The returned function should take an array of numbers as its parameter, and return an array of those numbers multiplied by the number that was passed into the first function.
+#
+# In the example below, 5 is the number passed into the first function. So it returns a function that takes an array and multiplies all elements in it by five.
+#
+# Translations and comments (and upvotes) welcome!
+# Example
+#
+# fives = factory(5)          # returns a function - fives
+# my_array = [1, 2, 3]
+# fives(my_array)             # returns [5, 10, 15]
+
+def factory(x):
+    def fives(arr):
+        arr_new = []
+        for i in range(len(arr)):
+            arr_new.append(arr[i] * x)
+        return arr_new
+    return fives
+
+# # best practice1
+# def factory(x):
+#     # Good Luck!
+#     def _factory(y):
+#         return [i*x for i in y]
+#     return _factory
+#
+# # best practice2
+# def factory(x):
+#     return lambda ar: [x*el for el in ar]
+#
+# # best practice3
+# factory=lambda x:lambda a:[x*e for e in a]
+#
+# #best practice with class
+# class factory:
+#
+#     def __init__(self, num):
+#         self.num = num
+#
+#     def __call__(self, arg):
+#         return [i * self.num for i in arg]
+
+fives = factory(5)  # returns a function - fives
+my_array = [1, 2, 3]
+print(fives(my_array))
+
+
+    # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
 #
 # In the display method, return a string representation of the list, but with square brackets around the currently selected element. Also, create the methods to_the_right and to_the_left which moves the cursor.
