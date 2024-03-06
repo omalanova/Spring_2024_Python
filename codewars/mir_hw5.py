@@ -376,6 +376,16 @@
 
 # def scoreboard(who_ate_what):
 
+# Python's Dynamic Classes #1
+# Note: Proposed function should allow only names with alphanumeric chars (upper & lower letters plus ciphers), but starting only with upper case letter. In other case it should raise an exception.
+# Disclaimer: there are obviously betters way to check class name than in example cases, but let's stick with that, that Timmy yet has to learn them.
+
+def class_name_changer(cls, new_name):
+    if new_name[0].isupper() and new_name.isalnum():
+        cls.__name__ = new_name
+    else:
+        raise Exception("error")
+
 # Person Class Bug
 # The following code was thought to be working properly, however when the code tries to access the age of the person instance it fails.
 #
@@ -387,13 +397,13 @@
 #
 # Note: the order of the person's full name is first name and last name.
 
-class Person():
-
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-        self.full_name = first_name + ' ' + last_name
+# class Person():
+#
+#     def __init__(self, first_name, last_name, age):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+#         self.full_name = first_name + ' ' + last_name
 
 # best practice
 #class Person():
