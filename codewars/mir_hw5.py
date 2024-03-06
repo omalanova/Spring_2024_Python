@@ -457,13 +457,13 @@ class Person():
 # my_array = [1, 2, 3]
 # fives(my_array)             # returns [5, 10, 15]
 
-def factory(x):
-    def fives(arr):
-        arr_new = []
-        for i in range(len(arr)):
-            arr_new.append(arr[i] * x)
-        return arr_new
-    return fives
+# def factory(x):
+#     def fives(arr):
+#         arr_new = []
+#         for i in range(len(arr)):
+#             arr_new.append(arr[i] * x)
+#         return arr_new
+#     return fives
 
 # # best practice1
 # def factory(x):
@@ -488,12 +488,82 @@ def factory(x):
 #     def __call__(self, arg):
 #         return [i * self.num for i in arg]
 
-fives = factory(5)  # returns a function - fives
-my_array = [1, 2, 3]
-print(fives(my_array))
+# fives = factory(5)  # returns a function - fives
+# my_array = [1, 2, 3]
+# print(fives(my_array))
 
+# Yoga Class
+# Lets imagine a yoga classroom as a Square 2D Array of Integers classroom, with each integer representing a person, and the value representing their skill level.
+#
+# classroom = [
+#             [3,2,1,3],
+#             [1,3,2,1],
+#             [1,1,1,2],
+#             ]
+#
+# poses = [1,7,5,9,10,21,4,3]
+#
+# During a yoga class the instructor gives a list of integers poses representing a yoga pose that each person in the class will attempt to complete.
+#
+# A person can complete a yoga pose if the sum of their row and their skill level is greater than or equal to the value of the pose.
+# Task
+#
+# Your task is to return the total amount poses completed for the entire classroom.
+# Example
+#
+# classroom = [
+#             [1,1,0,1], #sum = 3
+#             [2,0,6,0], #sum = 8
+#             [0,2,2,0], #sum = 4
+#             ]
+#
+# poses = [4, 0, 20, 10]
+#
+# 3 people in row 1 can complete the first pose
+# Everybody in row 1 can complete the second pose
+# Nobody in row 1 can complete the third pose
+# Nobody in row 1 can complete the fourth pose
+#
+# The total poses completed for row 1 is 7
+#
+# You'll need to return the total for all rows and all poses.
+#
 
-    # Menu Display
+def yoga(classroom, poses):
+    total = 0
+    arr_sum_row = []
+    for i in range(len(classroom)):
+        sum_row = 0
+        for j in range(len(classroom[i])):
+            sum_row += classroom[i][j]
+        arr_sum_row.append(sum_row)
+    for i in range(len(classroom)):
+        for j in range(len(classroom[i])):
+            classroom[i][j] += arr_sum_row[i]
+            for n in range(len(poses)):
+                if classroom[i][j] >= poses[n]:
+                    total += 1
+    return total
+# best practice
+# def yoga(classroom, poses):
+#     total_poses = 0
+#     for pose in poses:
+#         for row in classroom:
+#             for person in row:
+#                 if person + sum(row) >= pose:
+#                     total_poses += 1
+#     return total_poses
+
+#best practice 2
+# def yoga(classroom, poses):
+#     return sum(1 for r in classroom for v in r for p in poses if p<=v+sum(r))
+print(yoga([
+            [3,2,1,3],
+            [1,3,2,1],
+            [1,1,1,2],
+            ], [1,7,5,9,10,21,4,3]))
+
+# Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!
 #
 # In the display method, return a string representation of the list, but with square brackets around the currently selected element. Also, create the methods to_the_right and to_the_left which moves the cursor.
