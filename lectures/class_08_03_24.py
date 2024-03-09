@@ -21,11 +21,11 @@
 #     if not letter in st:
 #         return (None, None)
 #     else:
-#         for index, symbol in enumerate(st):
-#             if letter in st:
-#                 l.append(index)
-#                 print(index)
-#         return (l[0], l[-1])
+#         for x in range(len(st)):
+#             print(st[x])
+#             if letter == st[x]:
+#                 list.append(x)
+#         return (list[0], list[-1])
 # print(first_last('a', 'banana'))
 
 def first_last(letter, st):
@@ -36,3 +36,4 @@ def first_last(letter, st):
     return index, last_index
 
 print(first_last('a', 'banana'))
+
