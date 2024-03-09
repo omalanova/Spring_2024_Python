@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8049cbbb-d57e-44ba-84f9-f41aa1d3a552" name="Changes" comment="hw2">
+      <change afterPath="$PROJECT_DIR$/lectures/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lectures/class_08_03_24.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codewars/mir_hw5.py" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/mir_hw5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,25 +33,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.hw1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hw2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hw3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hw4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hw5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.lecture5_code.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mir_hw1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mir_hw2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mir_hw3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mir_hw4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mir_hw5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.part1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.space&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.class_08_03_24.executor": "Run",
+    "Python.hw1.executor": "Run",
+    "Python.hw2.executor": "Run",
+    "Python.hw3.executor": "Run",
+    "Python.hw4.executor": "Run",
+    "Python.hw5.executor": "Run",
+    "Python.lecture5_code.executor": "Run",
+    "Python.mir_hw1.executor": "Run",
+    "Python.mir_hw2.executor": "Run",
+    "Python.mir_hw3.executor": "Run",
+    "Python.mir_hw4.executor": "Run",
+    "Python.mir_hw5.executor": "Run",
+    "Python.part1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "settings.space"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="part1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Spring_2024_Python" />
