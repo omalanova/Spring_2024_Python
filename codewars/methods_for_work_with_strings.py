@@ -49,9 +49,9 @@
 #
 # "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
 
-def reverse_words(s):
-    new_list = s.split(' ')[::-1]
-    return ' '.join(new_list)
+# def reverse_words(s):
+#     new_list = s.split(' ')[::-1]
+#     return ' '.join(new_list)
 
 # best practice
 # def reverseWords(str):
@@ -67,4 +67,17 @@ def reverse_words(s):
 #     new_arr.reverse()
 #     return ' '.join(new_arr)
 
-print(reverse_words("The greatest victory is that which requires no battle"))
+# print(reverse_words("The greatest victory is that which requires no battle"))
+
+# Parse nice int from char problem
+# You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+#
+# Write a program that returns the girl's age (0-9) as an integer.
+#
+# Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old".
+# The first character in the string is always a number.
+
+def get_age(age):
+    return int(age[0])
+
+print(get_age("2 years old"))
