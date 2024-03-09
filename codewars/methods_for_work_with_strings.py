@@ -37,5 +37,34 @@
 #
 # "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
-def string_to_array(s):
-    return s.split(' ')
+# def string_to_array(s):
+#     return s.split(' ')
+
+# Reversed Words
+# Complete the solution so that it reverses all of the words within the string passed in.
+#
+# Words are separated by exactly one space and there are no leading or trailing spaces.
+#
+# Example(Input --> Output):
+#
+# "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+def reverse_words(s):
+    new_list = s.split(' ')[::-1]
+    return ' '.join(new_list)
+
+# best practice
+# def reverseWords(str):
+#     return " ".join(str.split(" ")[::-1])
+# def reverseWords(str):
+#     return ' '.join(reversed(str.split(' ')))
+# def reverseWords(string):
+#     return ' '.join(reversed(string.split()))
+# def reverseWords(str):
+#     new_arr = []
+#     for word in str.split():
+#         new_arr.append(word)
+#     new_arr.reverse()
+#     return ' '.join(new_arr)
+
+print(reverse_words("The greatest victory is that which requires no battle"))
