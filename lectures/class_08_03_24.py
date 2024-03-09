@@ -28,12 +28,22 @@
 #         return (list[0], list[-1])
 # print(first_last('a', 'banana'))
 
-def first_last(letter, st):
-    index = st.find(letter)
-    if index < 0:
-        return (None, None)
-    last_index = st.rfind(letter)
-    return index, last_index
+# с использованием функций find, rfind
+# def first_last(letter, st):
+#     index = st.find(letter)
+#     if index < 0:
+#         return (None, None)
+#     last_index = st.rfind(letter)
+#     return index, last_index
+#
+# print(first_last('a', 'banana'))
 
-print(first_last('a', 'banana'))
-
+def str_clean(st):
+    l = []
+    for i in st:
+        if i != '@':
+            l.append(i)
+        else:
+            l.pop()
+    return ''.join(l)
+print(str_clean('bt@aw@nw@ad@nb@ai@'))
