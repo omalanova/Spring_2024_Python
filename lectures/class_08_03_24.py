@@ -38,12 +38,13 @@
 #
 # print(first_last('a', 'banana'))
 
-def str_clean(st):
-    l = []
-    for i in st:
-        if i != '@':
-            l.append(i)
-        else:
-            l.pop()
-    return ''.join(l)
-print(str_clean('bt@aw@nw@ad@nb@ai@'))
+# def str_clean(st):
+#     l = []
+#     for i in st:
+#         if i != '@':
+#             l.append(i)
+#         else:
+#             l.pop()
+#     return ''.join(l)
+# print(str_clean('bt@aw@nw@ad@nb@ai@'))
+
