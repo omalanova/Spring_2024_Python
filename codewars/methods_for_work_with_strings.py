@@ -77,7 +77,18 @@
 # Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old".
 # The first character in the string is always a number.
 
-def get_age(age):
-    return int(age[0])
+# def get_age(age):
+#     return int(age[0])
+#
+# print(get_age("2 years old"))
 
-print(get_age("2 years old"))
+# Reversed Strings
+# Complete the solution so that it reverses the string passed into it.
+#
+# 'world'  =>  'dlrow'
+# 'word'   =>  'drow'
+
+def solution(string):
+    return string[::-1]
+
+print(solution('world'))
