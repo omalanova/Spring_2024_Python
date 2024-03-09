@@ -108,7 +108,20 @@
 # Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX",
 # the "XXX" is the expected result, not the input!
 
-def duplicate_encode(word):
-    return ''.join('(' if word.lower().count(ch) == 1 else ')' for ch in word.lower())
-print(duplicate_encode("din"))
-print(duplicate_encode("Success"))
+# def duplicate_encode(word):
+#     return ''.join('(' if word.lower().count(ch) == 1 else ')' for ch in word.lower())
+# best practice
+# def duplicate_encode(word):
+#     word = word.upper()
+#     result = ""
+#     for char in word:
+#         if word.count(char) > 1:
+#             result += ")"
+#         else:
+#             result += "("
+#
+#     return result
+#
+# print(duplicate_encode("din"))
+# print(duplicate_encode("Success"))
+
