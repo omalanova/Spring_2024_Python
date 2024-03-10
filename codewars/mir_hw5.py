@@ -350,7 +350,8 @@
 # Competitive eating scoreboard
 # You are the judge at a competitive eating competition and you need to choose a winner!
 #
-# There are three foods at the competition and each type of food is worth a different amount of points. Points are as follows:
+# There are three foods at the competition and each type of food is worth a different
+# amount of points. Points are as follows:
 #
 #     Chickenwings: 5 points
 #
@@ -358,14 +359,16 @@
 #
 #     Hotdogs: 2 points
 #
-# Write a function that helps you create a scoreboard. It takes as a parameter a list of objects representing the participants, for example:
+# Write a function that helps you create a scoreboard.
+# It takes as a parameter a list of objects representing the participants, for example:
 #
 # [
 #   {name: "Habanero Hillary", chickenwings: 5 , hamburgers: 17, hotdogs: 11},
 #   {name: "Big Bob" , chickenwings: 20, hamburgers: 4, hotdogs: 11}
 # ]
 #
-# It should return "name" and "score" properties sorted by score; if scores are equals, sort alphabetically by name.
+# It should return "name" and "score" properties sorted by score; if scores are equals,
+# sort alphabetically by name.
 #
 # [
 #   {name: "Big Bob", score: 134},
@@ -374,17 +377,59 @@
 #
 # Happy judging!
 
+def scoreboard(who_ate_what):
+    # score = {}
+    res = []
+    for i in who_ate_what:
+        score = 0
+        if 'chickenwings' in i:
+            score += i.get('chickenwings') * 5
+        if 'hamburgers' in i:
+            score += i.get('hamburgers') * 3
+        if 'hotdogs' in i:
+            score += i.get('hotdogs') * 2
+        my_dict = dict(name = i.get('name'), score = score)
+        res.append(my_dict)
+
+        res.sort(key=lambda dictionary: dictionary['name'])
+        res.sort(key=lambda dictionary: (dictionary["score"]), reverse=True)
+
+    return res
+
+# best practice
+# class Person:
+#     def __init__(self, person: dict):
+#         self.name = person.get('name')
+#         self.chickenwings = person.get('chickenwings',0)
+#         self.hamburgers = person.get('hamburgers',0)
+#         self.hotdogs = person.get('hotdogs',0)
+#
+#     def get_score(self):
+#         return self.chickenwings * 5 + self.hamburgers * 3 + self.hotdogs * 2
+#
 # def scoreboard(who_ate_what):
+#     scores = []
+#     for person in who_ate_what:
+#         p = Person(person)
+#         scores.append({"name": p.name, "score": p.get_score()})
+#     return sorted(scores, key=lambda k: (-k["score"], k['name']))
+
+
+print(scoreboard([{"name": "Billy The Beast", "chickenwings": 17 , "hamburgers": 7, "hotdogs": 8},
+                                       {"name": "Habanero Hillary", "chickenwings": 5 , "hamburgers": 17, "hotdogs": 11},
+                                       {"name": "Joey Jaws", "chickenwings": 8, "hamburgers": 8, "hotdogs": 15},
+                                       {"name": "Big Bob" , "chickenwings": 20, "hamburgers": 4, "hotdogs": 11}]))
+
 
 # Python's Dynamic Classes #1
 # Note: Proposed function should allow only names with alphanumeric chars (upper & lower letters plus ciphers), but starting only with upper case letter. In other case it should raise an exception.
 # Disclaimer: there are obviously betters way to check class name than in example cases, but let's stick with that, that Timmy yet has to learn them.
 
-def class_name_changer(cls, new_name):
-    if new_name[0].isupper() and new_name.isalnum():
-        cls.__name__ = new_name
-    else:
-        raise Exception("error")
+# def class_name_changer(cls, new_name):
+#     if new_name[0].isupper() and new_name.isalnum():
+#         cls.__name__ = new_name
+#     else:
+#         raise Exception("error")
 
 # Person Class Bug
 # The following code was thought to be working properly, however when the code tries to access the age of the person instance it fails.
@@ -539,21 +584,21 @@ def class_name_changer(cls, new_name):
 # You'll need to return the total for all rows and all poses.
 #
 
-def yoga(classroom, poses):
-    total = 0
-    arr_sum_row = []
-    for i in range(len(classroom)):
-        sum_row = 0
-        for j in range(len(classroom[i])):
-            sum_row += classroom[i][j]
-        arr_sum_row.append(sum_row)
-    for i in range(len(classroom)):
-        for j in range(len(classroom[i])):
-            classroom[i][j] += arr_sum_row[i]
-            for n in range(len(poses)):
-                if classroom[i][j] >= poses[n]:
-                    total += 1
-    return total
+# def yoga(classroom, poses):
+#     total = 0
+#     arr_sum_row = []
+#     for i in range(len(classroom)):
+#         sum_row = 0
+#         for j in range(len(classroom[i])):
+#             sum_row += classroom[i][j]
+#         arr_sum_row.append(sum_row)
+#     for i in range(len(classroom)):
+#         for j in range(len(classroom[i])):
+#             classroom[i][j] += arr_sum_row[i]
+#             for n in range(len(poses)):
+#                 if classroom[i][j] >= poses[n]:
+#                     total += 1
+#     return total
 # best practice
 # def yoga(classroom, poses):
 #     total_poses = 0
@@ -567,11 +612,11 @@ def yoga(classroom, poses):
 #best practice 2
 # def yoga(classroom, poses):
 #     return sum(1 for r in classroom for v in r for p in poses if p<=v+sum(r))
-print(yoga([
-            [3,2,1,3],
-            [1,3,2,1],
-            [1,1,1,2],
-            ], [1,7,5,9,10,21,4,3]))
+# print(yoga([
+#             [3,2,1,3],
+#             [1,3,2,1],
+#             [1,1,1,2],
+#             ], [1,7,5,9,10,21,4,3]))
 
 # Menu Display
 # Create a class that imitates a select screen. The cursor can move to left or right!

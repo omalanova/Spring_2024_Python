@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8049cbbb-d57e-44ba-84f9-f41aa1d3a552" name="Changes" comment="hw2">
-      <change beforePath="$PROJECT_DIR$/codewars/methods_for_work_with_strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/methods_for_work_with_strings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lectures/test_class_28_02_24.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codewars/Methods_to_work_with_Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/Methods_to_work_with_Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codewars/mir_hw5.py" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/mir_hw5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,27 +34,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.class_08_03_24.executor": "Run",
-    "Python.hw1.executor": "Run",
-    "Python.hw2.executor": "Run",
-    "Python.hw3.executor": "Run",
-    "Python.hw4.executor": "Run",
-    "Python.hw5.executor": "Run",
-    "Python.lecture5_code.executor": "Run",
-    "Python.methods_for_work_with_strings.executor": "Run",
-    "Python.mir_hw1.executor": "Run",
-    "Python.mir_hw2.executor": "Run",
-    "Python.mir_hw3.executor": "Run",
-    "Python.mir_hw4.executor": "Run",
-    "Python.mir_hw5.executor": "Run",
-    "Python.part1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "settings.space"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_class_28_02_24.test_equal.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_class_28_02_24.test_get_code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Methods_to_work_with_Numbers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.class_08_03_24.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hw5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lecture5_code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.methods_for_work_with_strings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mir_hw1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mir_hw2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mir_hw3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mir_hw4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mir_hw5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.part1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.space&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="part1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Spring_2024_Python" />
@@ -75,8 +81,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_class_28_02_24.test_equal" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Spring_2024_Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lectures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_class_28_02_24.test_equal&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_class_28_02_24.test_get_code" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Spring_2024_Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lectures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_class_28_02_24.test_get_code&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_class_28_02_24.test_get_code" />
+        <item itemvalue="Python tests.Python tests for test_class_28_02_24.test_equal" />
         <item itemvalue="Python.part1" />
       </list>
     </recent_temporary>

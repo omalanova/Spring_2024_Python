@@ -13,8 +13,8 @@
 #
 # time = 11.8--> litres = 5
 
-def litres(time):
-    return int(time / 2)
-
-print(litres(2))
-print(litres(1.4))
+# def litres(time):
+#     return int(time / 2)
+#
+# print(litres(2))
+# print(litres(1.4))
