@@ -10,14 +10,14 @@ import re
 #
 # You will be given a string of numbers and letters mixed up,
 # you have to return all the numbers in that string in the order they occur.
-def filter_string(st):
-    return int(re.sub(r'\D', '', st))
-
-#best practice
-# def filter_string(string):
-#     return int(''.join(filter(str.isdigit, string)))
-print(filter_string("123"))
-print(filter_string("a1b2c3"))
+# def filter_string(st):
+#     return int(re.sub(r'\D', '', st))
+#
+# #best practice
+# # def filter_string(string):
+# #     return int(''.join(filter(str.isdigit, string)))
+# print(filter_string("123"))
+# print(filter_string("a1b2c3"))
 
 # Regex count lowercase letters
 # Your task is simply to count the total number of lowercase letters in a string.
@@ -73,5 +73,22 @@ print(filter_string("a1b2c3"))
 # print(validate_usr('Hasd_12assssssasasasasasaasasasasas')) # -> False
 # print(validate_usr('p1pp1')) # -> True
 
+# validate code with simple regex
+# Basic regex tasks. Write a function that takes in a numeric code of any length.
+# The function should check if the code begins with 1, 2, or 3 and return true if so.
+# Return false otherwise.
 #
-#
+# You can assume the input will always be a number.
+
+def validate_code(code):
+    return bool(re.match("^1|2|3", str(code)))
+# best practice
+# def validate_code(code):
+#     return str(code).startswith(('1', '2', '3'))
+# def validate_code(code):
+#     return str(code)[0] in '123'
+print(validate_code(123)) # -> True
+print(validate_code(8)) # False
+print(validate_code(321)) # -> True
+print(validate_code(248)) # -> True
+
