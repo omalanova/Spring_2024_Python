@@ -377,24 +377,24 @@
 #
 # Happy judging!
 
-def scoreboard(who_ate_what):
-    # score = {}
-    res = []
-    for i in who_ate_what:
-        score = 0
-        if 'chickenwings' in i:
-            score += i.get('chickenwings') * 5
-        if 'hamburgers' in i:
-            score += i.get('hamburgers') * 3
-        if 'hotdogs' in i:
-            score += i.get('hotdogs') * 2
-        my_dict = dict(name = i.get('name'), score = score)
-        res.append(my_dict)
-
-        res.sort(key=lambda dictionary: dictionary['name'])
-        res.sort(key=lambda dictionary: (dictionary["score"]), reverse=True)
-
-    return res
+# def scoreboard(who_ate_what):
+#     # score = {}
+#     res = []
+#     for i in who_ate_what:
+#         score = 0
+#         if 'chickenwings' in i:
+#             score += i.get('chickenwings') * 5
+#         if 'hamburgers' in i:
+#             score += i.get('hamburgers') * 3
+#         if 'hotdogs' in i:
+#             score += i.get('hotdogs') * 2
+#         my_dict = dict(name = i.get('name'), score = score)
+#         res.append(my_dict)
+#
+#         res.sort(key=lambda dictionary: dictionary['name'])
+#         res.sort(key=lambda dictionary: (dictionary["score"]), reverse=True)
+#
+#     return res
 
 # best practice
 # class Person:
@@ -415,10 +415,10 @@ def scoreboard(who_ate_what):
 #     return sorted(scores, key=lambda k: (-k["score"], k['name']))
 
 
-print(scoreboard([{"name": "Billy The Beast", "chickenwings": 17 , "hamburgers": 7, "hotdogs": 8},
-                                       {"name": "Habanero Hillary", "chickenwings": 5 , "hamburgers": 17, "hotdogs": 11},
-                                       {"name": "Joey Jaws", "chickenwings": 8, "hamburgers": 8, "hotdogs": 15},
-                                       {"name": "Big Bob" , "chickenwings": 20, "hamburgers": 4, "hotdogs": 11}]))
+# print(scoreboard([{"name": "Billy The Beast", "chickenwings": 17 , "hamburgers": 7, "hotdogs": 8},
+#                                        {"name": "Habanero Hillary", "chickenwings": 5 , "hamburgers": 17, "hotdogs": 11},
+#                                        {"name": "Joey Jaws", "chickenwings": 8, "hamburgers": 8, "hotdogs": 15},
+#                                        {"name": "Big Bob" , "chickenwings": 20, "hamburgers": 4, "hotdogs": 11}]))
 
 
 # Python's Dynamic Classes #1
