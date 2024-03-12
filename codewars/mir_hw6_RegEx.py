@@ -43,3 +43,12 @@ def lowercase_count(strng):
 print(lowercase_count("abc"))
 print(lowercase_count("abcABC123"))
 print(lowercase_count("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"))
+
+# Regexp Basics - is it a digit?
+# Implement String#digit? (in Java StringUtils.isDigit(String)),
+# which should return true if given object is a digit (0-9), false otherwise.
+def is_digit(n):
+    return bool(re.fullmatch(r'\d',n))
+#best practice
+# def is_digit(n):
+#     return n.isdigit() and len(n)==1
