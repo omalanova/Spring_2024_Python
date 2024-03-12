@@ -10,11 +10,14 @@ import re
 #
 # You will be given a string of numbers and letters mixed up,
 # you have to return all the numbers in that string in the order they occur.
-# def filter_string(st):
-#     return re.findall(r'0-9',st)
-#
-# print(filter_string("123"))
-# print(filter_string("a1b2c3"))
+def filter_string(st):
+    return int(re.sub(r'\D', '', st))
+
+#best practice
+# def filter_string(string):
+#     return int(''.join(filter(str.isdigit, string)))
+print(filter_string("123"))
+print(filter_string("a1b2c3"))
 
 # Regex count lowercase letters
 # Your task is simply to count the total number of lowercase letters in a string.
@@ -61,11 +64,14 @@ import re
 #     underscore
 #
 # Length should be between 4 and 16 characters (both included).
-def validate_usr(username):
-    return bool(re.fullmatch(r'[a-z0-9_]{4,16}', username))
+# def validate_usr(username):
+#     return bool(re.fullmatch(r'[a-z0-9_]{4,16}', username))
 
 #best practice
 
-print(validate_usr('a')) # -> False
-print(validate_usr('Hasd_12assssssasasasasasaasasasasas')) # -> False
-print(validate_usr('p1pp1')) # -> True
+# print(validate_usr('a')) # -> False
+# print(validate_usr('Hasd_12assssssasasasasasaasasasasas')) # -> False
+# print(validate_usr('p1pp1')) # -> True
+
+#
+#
