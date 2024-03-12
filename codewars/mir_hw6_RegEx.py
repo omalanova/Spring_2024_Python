@@ -80,15 +80,31 @@ import re
 #
 # You can assume the input will always be a number.
 
-def validate_code(code):
-    return bool(re.match("^1|2|3", str(code)))
-# best practice
 # def validate_code(code):
-#     return str(code).startswith(('1', '2', '3'))
-# def validate_code(code):
-#     return str(code)[0] in '123'
-print(validate_code(123)) # -> True
-print(validate_code(8)) # False
-print(validate_code(321)) # -> True
-print(validate_code(248)) # -> True
+#     return bool(re.match("^1|2|3", str(code)))
+# # best practice
+# # def validate_code(code):
+# #     return str(code).startswith(('1', '2', '3'))
+# # def validate_code(code):
+# #     return str(code)[0] in '123'
+# print(validate_code(123)) # -> True
+# print(validate_code(8)) # False
+# print(validate_code(321)) # -> True
+# print(validate_code(248)) # -> True
 
+# A Strange Trip to the Market https://www.codewars.com/kata/55ccdf1512938ce3ac000056/train/python
+# Since Nessie is a master of disguise, the only way accurately tell is to look for the phrase "tree fiddy".
+# Since you are tired of being grifted by this monster,
+# the time has come to code a solution for finding The Loch Ness Monster.
+# Note that the phrase can also be written as "3.50" or "three fifty".
+# Your function should return true if you're talking with The Loch Ness Moster, false otherwise.
+def is_loch_ness_monster(string):
+    return bool(re.fullmatch(".*tree.fiddy.*|.*3[.]50.*|.*three.fifty.*", string))
+#best practice
+# def is_lock_ness_monster(s):
+#     return any(i in s for i in ('tree fiddy', 'three fifty', '3.50'))
+# def is_lock_ness_monster(s):
+#     return bool(re.search(r"3\.50|tree fiddy|three fifty", s))
+# def is_lock_ness_monster(string):
+#     import re
+#     return bool( re.findall("(?:tree fiddy|3\.50|three fifty)", string) )
