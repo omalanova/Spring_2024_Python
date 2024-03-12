@@ -32,23 +32,40 @@ import re
 #
 # "abcdefghijklmnopqrstuvwxyz" ===> 26
 
-def lowercase_count(strng):
-    return len(re.findall(r'[a-z]',strng))
+# def lowercase_count(strng):
+#     return len(re.findall(r'[a-z]',strng))
 
 #best practice
 # def lowercase_count(strng):
 #     return len(re.findall(r'[a-z]',strng))
 # def lowercase_count(str):
 #     return sum(1 for c in str if c.islower())
-print(lowercase_count("abc"))
-print(lowercase_count("abcABC123"))
-print(lowercase_count("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"))
+# print(lowercase_count("abc"))
+# print(lowercase_count("abcABC123"))
+# print(lowercase_count("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"))
 
 # Regexp Basics - is it a digit?
 # Implement String#digit? (in Java StringUtils.isDigit(String)),
 # which should return true if given object is a digit (0-9), false otherwise.
-def is_digit(n):
-    return bool(re.fullmatch(r'\d',n))
+# def is_digit(n):
+#     return bool(re.fullmatch(r'\d',n))
 #best practice
 # def is_digit(n):
 #     return n.isdigit() and len(n)==1
+
+# Simple validation of a username with regex
+# Write a simple regex to validate a username. Allowed characters are:
+#
+#     lowercase letters,
+#     numbers,
+#     underscore
+#
+# Length should be between 4 and 16 characters (both included).
+def validate_usr(username):
+    return bool(re.fullmatch(r'[a-z0-9_]{4,16}', username))
+
+#best practice
+
+print(validate_usr('a')) # -> False
+print(validate_usr('Hasd_12assssssasasasasasaasasasasas')) # -> False
+print(validate_usr('p1pp1')) # -> True
