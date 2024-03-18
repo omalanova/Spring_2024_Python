@@ -645,62 +645,62 @@
 # menu.to_the_left()
 # menu.display() ➞ "[1, [2], 3]"
 
-class Menu:
-    def __init__(self, lst):
-        self.lst = lst
-        self.length = len(self.lst)
-        self.index = 0
-
-    def to_the_right(self):
-        if self.index == 0:
-            self.index = (self.index + 1) % self.length
-            return 1
-        else:
-            index_new = self.index + 1
-            self.index = (self.index + 1) % self.length
-            return index_new
-
-    def to_the_left(self):
-        if self.index == 0:
-            self.index = (self.index - 1) % self.length
-            return -1
-        else:
-            index_new = (self.index - 1) % self.length
-            self.index -= 1
-            return index_new
-
-    def display(self):
-        temp = self.lst.copy()
-        temp[self.index] = [self.lst[self.index]]
-        return str(temp)
-
-#best practice
 # class Menu:
-#     def __init__(self, menu: list) -> None:
-#         self.menu = menu
+#     def __init__(self, lst):
+#         self.lst = lst
+#         self.length = len(self.lst)
 #         self.index = 0
-#         self.length = len(menu)
 #
-#     def to_the_right(self) -> None:
-#         self.index = (self.index + 1) % self.length
+#     def to_the_right(self):
+#         if self.index == 0:
+#             self.index = (self.index + 1) % self.length
+#             return 1
+#         else:
+#             index_new = self.index + 1
+#             self.index = (self.index + 1) % self.length
+#             return index_new
 #
-#     def to_the_left(self) -> None:
-#         self.index = (self.index - 1) % self.length
+#     def to_the_left(self):
+#         if self.index == 0:
+#             self.index = (self.index - 1) % self.length
+#             return -1
+#         else:
+#             index_new = (self.index - 1) % self.length
+#             self.index -= 1
+#             return index_new
 #
-#     def display(self) -> str:
-#         temp = self.menu.copy()
-#         temp[self.index] = [self.menu[self.index]]
+#     def display(self):
+#         temp = self.lst.copy()
+#         temp[self.index] = [self.lst[self.index]]
 #         return str(temp)
-
-
-
-lst = Menu([1, 2, 3, 4, 5])
-
-print(Menu.display(lst))
-print(Menu.to_the_left(lst))
-print(Menu.display(lst))
-print(Menu.to_the_left(lst))
-print(Menu.display(lst))
+#
+# #best practice
+# # class Menu:
+# #     def __init__(self, menu: list) -> None:
+# #         self.menu = menu
+# #         self.index = 0
+# #         self.length = len(menu)
+# #
+# #     def to_the_right(self) -> None:
+# #         self.index = (self.index + 1) % self.length
+# #
+# #     def to_the_left(self) -> None:
+# #         self.index = (self.index - 1) % self.length
+# #
+# #     def display(self) -> str:
+# #         temp = self.menu.copy()
+# #         temp[self.index] = [self.menu[self.index]]
+# #         return str(temp)
+#
+#
+#
+# lst = Menu([1, 2, 3, 4, 5])
+#
+# print(Menu.display(lst))
+# print(Menu.to_the_left(lst))
+# print(Menu.display(lst))
+# print(Menu.to_the_left(lst))
+# print(Menu.display(lst))
 
 
 
@@ -749,3 +749,47 @@ print(Menu.display(lst))
 #         return True
 #     def __ge__(self, *args):
 #         return True
+
+# Make Class
+#I don't like writing classes like this:
+
+# class Animal:
+#     def __init__(self, name, species, age, health, weight, color):
+#         self.name = name
+#         self.species = species
+#         self.age = age
+#         self.health = health
+#         self.weight = weight
+#         self.color = color
+#
+# Give me the power to create a similar class like this:
+#
+# Animal = make_class("name", "species", "age", "health", "weight", "color")
+
+
+def make_class(*args):
+    class Animal:
+        def __init__(self, *values):
+            self.__dict__ = {args[i]: values[i] for i in range(len(values))}
+    return Animal
+
+# best practice
+# def make_class(*args):
+#     class MyClass:
+#         def __init__(self, *vals):
+#             self.__dict__ = {x:y for x,y in zip(args, vals)}
+#     return MyClass
+
+#best pactice 2
+# from dataclasses import make_dataclass
+#
+# def make_class(*args):
+#     return make_dataclass('Animal', args)
+
+
+Animal1 = make_class("name", "species", "age", "health", "weight", "color")
+dog1 = Animal1("Bob", "Dog", 5, "good", "50lb", "brown")
+# print(Animal1.keys)
+print(dog1.__dict__.items())
+print(dog1.__dict__.keys())
+print(dog1.__dict__.values())
