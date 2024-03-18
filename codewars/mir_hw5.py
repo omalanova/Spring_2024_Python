@@ -645,19 +645,67 @@
 # menu.to_the_left()
 # menu.display() ➞ "[1, [2], 3]"
 
+class Menu:
+    def __init__(self, lst):
+        self.lst = lst
+        self.length = len(self.lst)
+        self.index = 0
+
+    def to_the_right(self):
+        if self.index == 0:
+            self.index = (self.index + 1) % self.length
+            return 1
+        else:
+            index_new = self.index + 1
+            self.index = (self.index + 1) % self.length
+            return index_new
+
+    def to_the_left(self):
+        if self.index == 0:
+            self.index = (self.index - 1) % self.length
+            return -1
+        else:
+            index_new = (self.index - 1) % self.length
+            self.index -= 1
+            return index_new
+
+    def display(self):
+        temp = self.lst.copy()
+        temp[self.index] = [self.lst[self.index]]
+        return str(temp)
+
+#best practice
 # class Menu:
-#     # add an __init__ method
+#     def __init__(self, menu: list) -> None:
+#         self.menu = menu
+#         self.index = 0
+#         self.length = len(menu)
 #
-#     def to_the_right(self):
+#     def to_the_right(self) -> None:
+#         self.index = (self.index + 1) % self.length
 #
-#     # write code here!
+#     def to_the_left(self) -> None:
+#         self.index = (self.index - 1) % self.length
 #
-#     def to_the_left(self):
-#
-#     # write code here!
-#
-#     def display(self):
-# write code here
+#     def display(self) -> str:
+#         temp = self.menu.copy()
+#         temp[self.index] = [self.menu[self.index]]
+#         return str(temp)
+
+
+
+lst = Menu([1, 2, 3, 4, 5])
+
+print(Menu.display(lst))
+print(Menu.to_the_left(lst))
+print(Menu.display(lst))
+print(Menu.to_the_left(lst))
+print(Menu.display(lst))
+
+
+
+
+
 
 # tasks with *
 # Anything
@@ -672,32 +720,32 @@
 #     anything(re) <= math,        'True'
 #     anything(5) == ord,          'True'
 
-def anything(thing):
-    return Anything('g', 2, False)
-"""
-    The "anything" function returns an object that has overloaded magic comparison methods:
-        __lt__(self, other)
-        __le__(self, other)
-        __eq__(self, other)
-        __ne__(self, other)
-        __gt__(self, other)
-        __ge__(self, other)
-    Due to polymorphism, these methods accept objects of any type,
-    because the result of their operation is independent and is always True.
-    Therefore, it does not matter what we pass to the function anything,
-    because it will always return an object for which the comparison operations will give
-    the result True.
-    """
-class Anything:
-    def __lt__(self, *args):
-        return True
-    def __le__(self, *args):
-        return True
-    def __eq__(self, *args):
-        return True
-    def __ne__(self, *args):
-        return True
-    def __gt__(self, *args):
-        return True
-    def __ge__(self, *args):
-        return True
+# def anything(thing):
+#     return Anything('g', 2, False)
+# """
+#     The "anything" function returns an object that has overloaded magic comparison methods:
+#         __lt__(self, other)
+#         __le__(self, other)
+#         __eq__(self, other)
+#         __ne__(self, other)
+#         __gt__(self, other)
+#         __ge__(self, other)
+#     Due to polymorphism, these methods accept objects of any type,
+#     because the result of their operation is independent and is always True.
+#     Therefore, it does not matter what we pass to the function anything,
+#     because it will always return an object for which the comparison operations will give
+#     the result True.
+#     """
+# class Anything:
+#     def __lt__(self, *args):
+#         return True
+#     def __le__(self, *args):
+#         return True
+#     def __eq__(self, *args):
+#         return True
+#     def __ne__(self, *args):
+#         return True
+#     def __gt__(self, *args):
+#         return True
+#     def __ge__(self, *args):
+#         return True
